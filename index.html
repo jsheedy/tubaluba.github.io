@@ -3,25 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Tubaluba Brass Band from Seattle, WA</title>
+<!--
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-->
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+<!--
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+-->
     <style>
-
-    /* GLOBAL STYLES
-    -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
 
     body {
       padding-bottom: 40px;
-      color: #5a5a5a;
+      color: rgb(180,150,0);
+
+      background: url(img/bg.JPG) no-repeat bottom center fixed; 
+      -webkit-background-size: cover 100px;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover ;
     }
-
-
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
@@ -38,11 +42,13 @@
     .navbar-wrapper .navbar {
 
     }
-    .navbar { height: 100px;}
+    .navbar { height: 90px;
+    min-width:950px;
+}
 
     /* Remove border and change up box shadow for more contrast */
     .navbar .navbar-inner {
-      height: 100px;
+      height: 90px;
       border: 0;
       -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
          -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
@@ -51,15 +57,17 @@
 
     /* Downsize the brand/project name a bit */
     .navbar .brand {
+      color: rgb(180,150,0);
       padding: 30px 0px 0px 30px;
-      font-size: 60px;
+      font-size: 50px;
       font-weight: bold;
       text-shadow: 0 -1px 0 rgba(0,0,0,.5);
     }
 
     /* Navbar links: increase padding for taller navbar */
     .navbar .nav > li > a {
-      padding: 40px 18px;
+      color: rgb(180,150,0);
+      padding: 30px 18px;
       font-size: 25px;
     }
 
@@ -75,7 +83,7 @@
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     .carousel .container {
@@ -133,6 +141,9 @@
     -------------------------------------------------- */
 
     /* Center align the text within the three columns below the carousel */
+    .marketing {
+    margin-top: 20px;
+}
     .marketing .span4 {
       text-align: center;
     }
@@ -152,6 +163,9 @@
       margin: 80px 0; /* Space out the Bootstrap <hr> more */
     }
     .featurette {
+      background-color: black;
+      padding: 20px;
+      
       padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
       overflow: hidden; /* Vertically center images part 2: clear their floats. */
     }
@@ -175,11 +189,10 @@
       letter-spacing: -1px;
     }
 
-
-
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
+/*
     @media (max-width: 979px) {
 
       .container.navbar-wrapper {
@@ -219,7 +232,12 @@
         margin: -20px;
       }
 
+    .carouselshim { 
+        display: none;
+    }
       .carousel {
+        display: none;
+    
         margin-left: -20px;
         margin-right: -20px;
       }
@@ -258,6 +276,21 @@
       }
 
     }
+*/
+.row-fluid div.box {
+  background-color: rgba(0,0,0,.80);
+  padding: 20px;
+  margin-top: 30px;
+}
+a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
+.calendar h2  {
+    margin-bottom:30px;
+}
+.calendar .entry .date {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -292,31 +325,18 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Tubaluba</a>
+            <a class="brand" href="#">TUBALUBA</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+<!--
             <div class="nav-collapse collapse">
+-->
+            <div class="">
               <ul class="nav pull-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#videos">Videos</a></li>
+                <li><a href="#band">Band</a></li>
                 <li><a href="#shows">Shows</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
-                <!--
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              -->
+                <li><a href="#music">Music & Video</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#booking">Booking</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -327,44 +347,33 @@
   -->
 
 
-<div class="row" style="height: 100px"> </div>
+<div class="row carouselshim" style="height: 90px"> </div>
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="row carousel slide">
       <div class="carousel-inner">
         <div class="item active">
+          <img src="img/carousel/TL@TBD.091.1.jpg" alt="">
+<!--
           <img src="img/TL@TBD.091.1.jpg" alt="">
+-->
+<!--
           <div class="container">
             <div class="carousel-caption">
               <h1>BACKDOOR</h1>
               <p class="lead">band at backdoor</p>
-              <!--
               <a class="btn btn-large btn-primary" href="#">Sign up today</a>
-            -->
             </div>
           </div>
+-->
         </div>
         <div class="item">
-          <img src="img/TL@TBD.107.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>WHAM.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-            </div>
+          <img src="img/carousel/TL@TBD.002.jpg" alt="">
           </div>
-        </div>
         <div class="item">
-          <img src="img/TL@TBD.209.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
+          <img src="img/carousel/DSC_0563.JPG" alt="">
           </div>
-        </div>
-      </div>
+        </div> <!-- -inner -->
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
@@ -380,12 +389,16 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
+<!--
           <h2>Bandcamp</h2>
+-->
           <p><iframe style="border: 0; width: 250px; height: 758px;" src="https://bandcamp.com/EmbeddedPlayer/album=2478005200/size=large/bgcol=ffffff/linkcol=e99708/transparent=true/" seamless><a href="http://tubaluba.bandcamp.com/album/tubaluba">Tubaluba by Tubaluba</a></iframe>
           </p>
         </div><!-- /.span4 -->
         <div class="span4">
+<!--
           <h2>Twitter</h2>
+-->
           <p><a class="twitter-timeline" 
             href="https://twitter.com/TubalubaBand" 
             data-widget-id="387043083591757824"
@@ -396,51 +409,236 @@
 </p>
         </div><!-- /.span4 -->
         <div class="span4">
+<!--
           <h2>Instagram</h2>
-          <p><!-- SnapWidget -->
+-->
+<!-- SnapWidget -->
+<iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDE1MHwyfDV8fG5vfDV8bm9uZXxvblN0YXJ0fG5v&v=191013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:310px; height: 775px" ></iframe>
+<!--
 <iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDEyNXwyfDR8fG5vfDV8bm9uZXxvblN0YXJ0fHllcw==&v=61013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:260px; height: 520px" ></iframe></p>
+-->
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+<!--
+      <hr class="featurette-divider" />
+-->
+<!--
+    <hr class="featurette-divider" />
+-->
+<!--
+    <div class="featurette">
+-->
+    <div class="row-fluid">
+    <div class="span6">
 
-      <a name="contact" ></a>
-      <div class="featurette">
-        <img class="featurette-image pull-right img-responsive" src="img/logo.png" style="max-height: 300px">
-        <h2 class="featurette-heading">Contact <span class="muted">us </span></h2>
+    <a class="anchor" name="music"></a>
+    <div class="box">
+        <h2 class="featurette-heading">Music &amp; Videos</h2>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/B5lJToWj4_0" frameborder="0" allowfullscreen></iframe>
+    </div> <!-- featurette -->
+
+<!--
+    <hr class="featurette-divider" />
+-->
+    <a class="anchor" name="photos"></a>
+    <div class="box">
+<!--
+        <h2 class="featurette-heading">Photos</h2>
+-->
+<!-- SnapWidget -->
+<!-- SnapWidget -->
+<iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDEwMHw0fDh8fG5vfDV8bm9uZXxvblN0YXJ0fG5v&v=191013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:420px; height: 840px" ></iframe>
+    </div> <!-- featurette -->
+
+
+<!--
+    <hr class="featurette-divider" />
+-->
+    <a class="anchor" name="booking"></a>
+      <div class="box">
+        <h2 class="featurette-heading">Booking</h2>
 
                     <p class="lead">For booking,</p>
 <ul>
 <li>email: <span class="mailme">booking at tubalubaband dot com</span></li>
 <li>phone: Josh Wilson, (206) 890-9011</li>
 </ul>
+<p><a target="_blank" href="img/Tubaluba-Stage-Plot.pdf">Tubaluba-Stage-Plot.pdf</a>
+<p><a target="_blank" href="img/Tubaluba-Marching-Stage-Plot.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
 <!--
 <p>or fill out this form and we&#8217;ll get right back to you!</p>
 -->
-      </div>
+
+    </div> <!-- featurette -->
+
+
+<a class="anchor" name="shows"></a>
+<div class="box calendar">
+        <h2 class="featurette-heading">Upcoming Shows</h2>
+
+<div class="entry">
+    <div class="date">10/19/2013</div>
+    <div class="venue"><a target="_blank" href="http://www.backdooratroxys.com/">The Backdoor</a></div>
+    <div class="address">462 N 36th Street, Seattle</div>
+    
+<p>
+“Tubaluba Tidal Wave” Video Release Party. $5 Cover that includes free drink and show. Doors open at 5pm (Grab some drinks!). Video Showing at 6pm (Grab some seats!). Tubaluba private show starts at 6:30.
+</p>
+</div>
+<div class="entry">
+    <div class="date">10/26/2013</div>
+    <div class="venue"><a target="_blank" href="">Post</a></div>
+    <div class="address">1914 Post Alley, Seattle</div>
+    <p>
+Spooky Halloween time is NEAR!!! Here are your plans for the night of October 26th – the 3rd Annual TUBALUBA Halloween show partnering with Market Ghost Tours and Espresso. We wouldn’t miss it… for the world. 
+    </p>
+</div>
+    </div> <!-- box -->
+    </div> <!-- left col -->
+
+    <a class="anchor" name="band"></a>
+    <div class="box span6">
+        <h2 class="featurette-heading">The Band</h2>
+        <p>
+Tubaluba is the brainchild of Josh “Papaluba” Wilson.  In 2009, Wilson gathered personnel with the philosophy that players had to be good, and players had to be cool.  Musically, Wilson hoped to capture the spirit of New Orleans, and convey it with a brass street band rhythm and style.  
+</p><p>
+The band still plays some of the brass band and vintage soul favorites that inspired it’s conception, but is steadily writing, developing, and performing it’s own repertoire.  Their self titled debut was released on Fat Tuesday 2012 to fanfare from Seattle’s KEXP radio and the band is planning a 2nd release for Mardi Gras 2014.
+
+</p><p>
+Tubaluba has also conceived two signature events.  The first is an annual Halloween funeral procession through the streets of Seattle to a destination venue.  The second event is the Mardi Gras Party Bus.  For the past two Mardi Gras’, Tubaluba has filled a large coach bus with fans who then follow the band to several performances around town from noon to midnight.  This event gathers television, newspaper, radio, and blogging attention.
+
+</p><p>
+Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
+</p>
+
+<p class="lead">Cast of Characters</p>
+
+<h4>Josh Wilson Aka Papa Luba</h4>
+<p>
+1) Josh Wilson: When Papaluba grows up he wants to be James Booker, 
+Professor Longhair, and Jimmy Smith. That could be why he spends so 
+much time in New Orleans. If the Internet and your interest were bigger, 
+he would list all the bands and musicians he has played with all over the 
+continent. Instead, he will leave you wondering if he’s an in-demand band 
+mate or a complete asshole. Actually, that could be why he spends so much 
+time in New Orleans.
+</p>
+
+<h4>Janet Adams-Schwab Aka JanJan</h4>
+<p>
+
+Singer/songwriter based in Seattle Washington.  As a teen Janet was a newly discovered act under the production of Tito and Jermaine Jackson.  During high school, she traveled to Los Angeles from her home state of Massachusetts to work on her recording career, but soon discovered she could better develop her musical talents closer to home at Berklee College of Music in Boston.
+
+</p><p>
+After receiving her degree from Berklee, Janet headed west to the San Francisco Bay Area. Her most significant project during her 8-year stay in the Bay: The 12-piece Latin/Funk band Los Angelitos, a popular headliner during the 1990's. Los Angelitos picked up many awards during their time in the Bay Area scene including a California Music Award for Best World Beat band in 1997. 
+</p><p>
+
+Performing up and down the west coast, Los Angelitos shared the stage opening for Bootsy Collins, WAR, Ozomatli and Morris Day and the Time. Their original music appears in episodes of CBS television's Nash Bridges and her involvements with the show lead to a live performance with Nash Bridges’ star Don Johnson.
+
+</p><p>
+
+
+Janet Adams has certainly played with some of the greatest working musicians around while opening for some of the best artists to date. Throughout her career, former band mates included members of The Counting Crows, Spearhead, Third Eye Blind, The Time, and Hall &amp; Oats. 
+</p><p>
+
+In other notable gigs Janet has opened for: Alanis Morissette, Macy Gray, Melissa Etheridge, Shelby Lynne, STOMP, Boz Skaggs, Dr. John, Joe Henderson and Dianne Reeves.
+</p>
+
+
+<h4>Kohen Burrill Aka KoheeBee</h4>
+<p>
+KB, the token Alaskan, required of every brass band, learned 
+the drums and the music business from his dad, Gene. Show Brazil and 
+Carrie Clark and the Lonesome Lovers keep him in plenty of trouble when 
+not busy with TUBALUBA. KB strongly believes he can train a panda to 
+run his time machine, give him the power of invisibility and help him carry 
+his gear. We keep telling him that even though pandas aren’t in Alaska, they 
+are still, in fact, bears. Which means, they’ll never carry gear.
+</p>
+
+<h4>Jason Cressey Aka Cresley</h4>
+<p>
+Cresley picked up the trombone once his xylophone 
+career stalled in the 5th grade.  Al Grey showed him why the C Jam Blues is cooler than Mary Had a Little Lamb.  Chuck Israels taught him he’s more 
+creative with his eyes closed.  Fred Wesley taught him to stay off the one.  Tubaluba taught Cresley to “stay off one-eyed Mary and her lamb”.
+</p>
+
+<h4>Jon Hansen Aka Handsome Jon</h4>
+<p>
+Handsome Jon Hansen is getting his Doctorate in Tuba 
+performance at UW, studying under Chris Olka. He’s also studied 
+with Jim Self and Norm Pearson at USC, and with Sergio Carolino in 
+Portugal. When not studying the tuba, Handsome Jon is playing the 
+tuba with the Seattle Repertory Jazz Orchestra, the Fabulous Party 
+Boys, and TUBALUBA. You can always recognize Handsome Jon 
+because he has a giant, keg-shaped mute that rests on top of his tuba. 
+Jon likes beer.
+</p>
+
+
+<h4>George Iftner Aka Georgeous</h4>
+<p>
+Georgeous learned to play trumpet in Michigan back 
+when Chuck Mangione was cool. He took his talents to the New 
+England Conservatory and the University of Wisconsin-Madison 
+(where he and Papaluba never met despite playing in the same 
+trumpet section). George is pretty sure he learned to play salsa and 
+meringue in the Peace Corps. We’re pretty sure it was while he was 
+in Chicago playing in salsa and meringue bands.
+</p>
+
+<h4>Bill Jones Aka Dr. Jones</h4>
+<p>
+Dr. Jones is a Vegas kid. When the show band gigs 
+dried up in Vegas, Bill did what any red-blooded Vegas kids would do, he 
+joined a ska band (the Mudsharks) and toured the country for 7 years. 
+When the ska business got too frenetic, he joined a reggae band (Clinton 
+Fearon). Now Dr. Jones plays with the Soundwave (Seattle Sounders Band), 
+the Western Bluebirds, and TUBALUBA and aspires to be a moonshiner.
+</p>
+
+
+<h4>Joseph Sheedy Aka LL Cool J</h4>
+<p>
+Joseph is a machine developed and fabricated for research into the 7XL program. He was given the algorithms and artificial machine learning sensory infrastructure to acquire and develop skills necessary forcoexistence and survival in the human civilization of the early 21st century.
+The system’s neural network found ways to manipulate the saxophone based 
+on early work by the Giant Steps Robot.  He has been a member of (Beast, Please Be Still), Yellow Hat 
+Band, and others. 
+</p>
+
+
 <!--
-      <hr class="featurette-divider">
+        <div class="row">
+        </div>
+-->
+</div> <!-- row span6 -->
+    </div> <!-- featurette -->
 
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="img/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
+<!--
+    <hr class="featurette-divider" />
+-->
+<!--
+    <hr class="featurette-divider" />
 -->
 
-      <hr class="featurette-divider">
+
+
 
       <!-- /END THE FEATURETTES -->
 
 
       <!-- FOOTER -->
       <footer>
+<!--
         <p class="pull-right"><a href="#">Back to top</a></p>
+-->
+<!--
         <p>&copy; 2013 TUBALUBA </p>
+-->
       </footer>
 
     </div><!-- /.container -->
@@ -451,6 +649,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mailme.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--
     <script src="js/bootstrap-transition.js"></script>
@@ -471,9 +670,9 @@
         $(function(){
           // carousel demo
           $('#myCarousel').carousel()
+          $('span.mailme').mailme();
         })
       }(window.jQuery)
     </script>
-    <script src="js/holder/holder.js"></script>
   </body>
 </html>
