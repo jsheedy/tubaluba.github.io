@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Tubaluba Brass Band from Seattle, WA</title>
+    <meta name="description" content="Tubaluba is a Seattle based brass band.  With roots in the New Orleans style, their style is described as Jambalaya Brass Pop" />
+    <meta name="keywords" content="tubaluba,brass,band,seattle" />
+
     <!--
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     -->
@@ -11,6 +14,9 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
+
+
     <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
 
 <!--
@@ -206,9 +212,14 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mailme.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-lightbox.min.js"></script>
   </head>
 
   <body>
@@ -277,8 +288,30 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
+        <a data-toggle="lightbox" href="#poster">
+            <img style="width:100%" src="img/posters/tubalubahalloween.jpg" />
+        </a>
+        <div id="poster" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-dialog'>
+                <div class='lightbox-content'>
+                    <img src="img/posters/tubalubahalloween.jpg">
+                    <div class='lightbox-caption'>
+                        HOPE TO SEE YOU THERE! --TUBALUBA
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <img src="" />
         <p>
-        <iframe width="100%" height="466" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116472571"></iframe>
+        <iframe width="100%" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116472571"></iframe>
         </p>
       </div><!-- /.span4 -->
         <div class="span4">
@@ -314,10 +347,10 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
             }
             </style>
             <div id="mc_embed_signup">
-                <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;">
+                <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;margin:0px;width:255px;">
                     <label for="mce-EMAIL">Subscribe to our email list</label>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div class="clear"><input style="display:inline;min-height:26px" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                 </form>
             </div>
             </div>
@@ -376,6 +409,9 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
     <p>
 Spooky Halloween time is NEAR!!! Here are your plans for the night of October 26th – the 3rd Annual TUBALUBA Halloween show partnering with Market Ghost Tours and Espresso. We wouldn’t miss it… for the world. 
     </p>
+        <a data-toggle="lightbox" href="#poster">
+            <img style="width:100%" src="img/posters/tubalubahalloween.jpg" />
+        </a>
 </div>
     </div> <!-- box -->
     </div> <!-- left col -->
@@ -492,12 +528,6 @@ Band, and others.
 
 
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/jquery.mailme.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script>
       !function ($) {
         $(function(){
@@ -506,6 +536,19 @@ Band, and others.
           $('span.mailme').mailme();
         })
       }(window.jQuery)
+    </script>
+    <!-- analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23998654-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
   </body>
 </html>
