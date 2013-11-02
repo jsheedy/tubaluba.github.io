@@ -19,189 +19,164 @@
 
     <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
 
-<!--
+    <!--
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
--->
+    -->
     <style>
 
-    body {
-      padding-bottom: 40px;
-      color: rgb(180,150,0);
+      body {
+        padding-bottom: 40px;
+        color: rgb(180,150,0);
 
-      background: url(img/logo.png) repeat ; 
-      background-size: 100px 100px;
-    }
+        background: url(img/logo-100x100.png) repeat ; 
+        background-size: 100px 100px;
+      }
 
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
+      /* Special class on .container surrounding .navbar, used for positioning it into place. */
+      .navbar-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+      }
+      .navbar {
+          height: 90px;
+          min-width:950px;
+      }
 
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-    }
-    .navbar {
+      /* Remove border and change up box shadow for more contrast */
+      .navbar .navbar-inner {
         height: 90px;
-        min-width:950px;
-    }
+        border: 0;
+        -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+           -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+                box-shadow: 0 2px 10px rgba(0,0,0,.25);
+      }
 
-    /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
-      height: 90px;
-      border: 0;
-      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    }
+      /* Downsize the brand/project name a bit */
+      .navbar .brand {
+        color: rgb(180,150,0);
+        padding: 30px 0px 0px 50px;
+        font-size: 55px;
+        font-weight: bold;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+          font-family: 'Changa One', cursive;
+      }
 
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      color: rgb(180,150,0);
-      padding: 30px 0px 0px 50px;
-      font-size: 55px;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-        font-family: 'Changa One', cursive;
-    }
+      /* Navbar links: increase padding for taller navbar */
+      .navbar .nav > li > a {
+        color: rgb(180,150,0);
+        padding: 30px 18px;
+        font-size: 25px;
+      }
 
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      color: rgb(180,150,0);
-      padding: 30px 18px;
-      font-size: 25px;
-    }
+      /* Offset the responsive button for proper vertical alignment */
+      .navbar .btn-navbar {
+        margin-top: 10px;
+      }
 
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
+      /* Carousel base class */
+      .carousel {
+        margin-bottom: 30px;
+      }
 
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
+      .carousel .container {
+        position: relative;
+        z-index: 9;
+      }
 
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 30px;
-    }
+      .carousel-control {
+        height: 80px;
+        margin-top: 0;
+        font-size: 120px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.4);
+        background-color: transparent;
+        border: 0;
+        z-index: 10;
+      }
 
-    .carousel .container {
-      position: relative;
-      z-index: 9;
-    }
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        min-width: 100%;
+        
+        min-height: 150px;
+        max-height: none;
 
-    .carousel-control {
-      height: 80px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-      z-index: 10;
-    }
+        /* from http://stackoverflow.com/questions/17290701/maintain-image-aspect-ratio-in-carousel */
+        max-width: none;
+      }
 
-    .carousel .item {
-      height: 500px;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      
-      min-width: 100%;
-      
-      min-height: 150px;
-      max-height: none;
-
-      /* from http://stackoverflow.com/questions/17290701/maintain-image-aspect-ratio-in-carousel */
-      max-width: none;
-    }
-
-    .carousel-caption {
-      background-color: transparent;
-      position: static;
-      max-width: 550px;
-      padding: 0 20px;
-      margin-top: 200px;
-    }
-    .carousel-caption h1,
-    .carousel-caption .lead {
-      margin: 0;
-      line-height: 1.25;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    }
-    .carousel-caption .btn {
-      margin-top: 10px;
-    }
+      .carousel-caption {
+        background-color: transparent;
+        position: static;
+        max-width: 550px;
+        padding: 0 20px;
+        margin-top: 200px;
+      }
+      .carousel-caption h1,
+      .carousel-caption .lead {
+        margin: 0;
+        line-height: 1.25;
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      }
+      .carousel-caption .btn {
+        margin-top: 10px;
+      }
 
 
-    /* MARKETING CONTENT
-    -------------------------------------------------- */
+      /* Center align the text within the three columns below the carousel */
+      .marketing {
+          margin-top: 20px;
+      }
+      .marketing .span4 {
+          text-align: center;
+      }
+      .marketing h2 {
+        font-weight: normal;
+      }
+      .marketing .span4 p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
 
-    /* Center align the text within the three columns below the carousel */
-    .marketing {
-        margin-top: 20px;
-    }
-    .marketing .span4 {
-        text-align: center;
-    }
-    .marketing h2 {
-      font-weight: normal;
-    }
-    .marketing .span4 p {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+      .featurette-heading {
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
 
+      .row-fluid div.box {
+        background-color: rgba(0,0,0,.80);
+        padding: 20px;
+        margin-top: 30px;
+      }
 
+      a.anchor{
+        display: block;
+        position: relative;
+        top: -100px;
+        visibility: hidden;
+     }
 
-/*
-    .featurette-divider {
-      margin: 80px 0; 
-    }
-    .featurette {
-      background-color: black;
-      padding: 20px;
-      
-      padding-top: 120px; 
-      overflow: hidden; 
-    }
-    .featurette-image {
-      margin-top: -120px; 
-    }
+      .calendar h2  {
+          margin-bottom:30px;
+      }
 
-    .featurette-image.pull-left {
-      margin-right: 40px;
-    }
-    .featurette-image.pull-right {
-      margin-left: 40px;
-    }
-*/
-    .featurette-heading {
-      font-size: 50px;
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-
-.row-fluid div.box {
-  background-color: rgba(0,0,0,.80);
-  padding: 20px;
-  margin-top: 30px;
-}
-a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
-.calendar h2  {
-    margin-bottom:30px;
-}
-.calendar .entry .date {
-    font-size: 2em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+      .calendar .entry .date {
+          font-size: 2em;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -225,17 +200,12 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
   <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
           <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
             <a class="brand" href="#">TUBALUBA</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-<!--
-            <div class="nav-collapse collapse">
--->
             <div class="">
               <ul class="nav pull-right">
                 <li><a href="#band">Band</a></li>
@@ -249,29 +219,25 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
-<!--
-      </div>  /.container
-    </div> /.navbar-wrapper
-  -->
 
 
-<div class="row carouselshim" style="height: 90px"> </div>
-    <!-- Carousel
-    ================================================== -->
+    <div class="row carouselshim" style="height: 90px"> </div>
+
     <div id="myCarousel" class="row carousel slide">
       <div class="carousel-inner">
+
         <div class="item active">
           <img src="img/carousel/TL@TBD.091.1.jpg" alt="">
         </div>
         <div class="item">
           <img src="img/carousel/TL@TBD.002.jpg" alt="">
-          </div>
+        </div>
 <!--
         <div class="item">
           <img src="img/carousel/DSC_0563.JPG" alt="">
           </div>
 -->
-        </div> <!-- -inner -->
+      </div> <!-- -inner -->
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
@@ -288,6 +254,8 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
+
+<!--
         <a data-toggle="lightbox" href="#poster">
             <img style="width:100%" src="img/posters/tubalubahalloween.jpg" />
         </a>
@@ -296,20 +264,12 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
                 <div class='lightbox-content'>
                     <img src="img/posters/tubalubahalloween.jpg">
                     <div class='lightbox-caption'>
-                        HOPE TO SEE YOU THERE! --TUBALUBA
+                        HOPE TO SEE YOU THERE! -TUBALUBA
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-        <img src="" />
+-->
         <p>
         <iframe width="100%" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116472571"></iframe>
         </p>
@@ -372,24 +332,10 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
     </div> <!-- featurette -->
 
 
-    <a class="anchor" name="booking"></a>
-      <div class="box">
-        <h2 class="featurette-heading">Booking</h2>
 
-                    <p class="lead">For booking,</p>
-<ul>
-<li>email: <span class="mailme">booking at tubalubaband dot com</span></li>
-<li>phone: Josh Wilson, (206) 890-9011</li>
-</ul>
-<p><a target="_blank" href="img/Tubaluba-Stage-Plot.pdf">Tubaluba-Stage-Plot.pdf</a>
-<p><a target="_blank" href="img/Tubaluba-Marching-Stage-Plot.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
-
-    </div> <!-- featurette -->
-
-
-<a class="anchor" name="shows"></a>
-<div class="box calendar">
-        <h2 class="featurette-heading">Upcoming Shows</h2>
+    <a class="anchor" name="shows"></a>
+    <div class="box calendar">
+      <h2 class="featurette-heading">Upcoming Shows</h2>
 
 <!--
 <div class="entry">
@@ -402,6 +348,7 @@ a.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
 </p>
 </div>
 -->
+<!--
 <div class="entry">
     <div class="date">10/26/2013</div>
     <div class="venue"><a target="_blank" href="">Post</a></div>
@@ -413,8 +360,32 @@ Spooky Halloween time is NEAR!!! Here are your plans for the night of October 26
             <img style="width:100%" src="img/posters/tubalubahalloween.jpg" />
         </a>
 </div>
+-->
+<div class="entry">
+    <div class="date">12/31/2013</div>
+    <div class="venue"><a target="_blank" href="http://www.firstnighttacoma.org/">First Night Tacoma</a></div>
+    <div class="address">Tacoma, WA</div>
+    <p>
+    </p>
+</div>
+
     </div> <!-- box -->
     </div> <!-- left col -->
+
+    <a class="anchor" name="booking"></a>
+      <div class="box span6">
+        <h2 class="featurette-heading">Booking</h2>
+
+        <p class="lead">For booking,</p>
+        <ul>
+          <li>email: <span class="mailme">booking at tubalubaband dot com</span></li>
+          <li>phone: Josh Wilson, (206) 890-9011</li>
+        </ul>
+        <p><a target="_blank" href="img/Tubaluba-Stage-Plot.pdf">Tubaluba-Stage-Plot.pdf</a>
+        <p><a target="_blank" href="img/Tubaluba-Marching-Stage-Plot.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
+
+    </div> <!-- featurette -->
+
 
     <a class="anchor" name="band"></a>
     <div class="box span6">
@@ -430,6 +401,7 @@ Tubaluba has also conceived two signature events.  The first is an annual Hallow
 </p><p>
 Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
 </p>
+<!--
 
 <p class="lead">Cast of Characters</p>
 
@@ -443,12 +415,12 @@ continent. Instead, he will leave you wondering if he’s an in-demand band
 mate or a complete asshole. Actually, that could be why he spends so much 
 time in New Orleans.
 </p>
-
+-->
 <!--
 <h4>Janet Adams Schwab, <i>JanJan</i></h4>
 <p></p>
 -->
-
+<!--
 <h4>Kohen Burrill, <i>KoheeBee</i></h4>
 <p>
 KB, the token Alaskan, required of every brass band, learned 
@@ -502,7 +474,7 @@ The system’s neural network found ways to manipulate the saxophone based
 on early work by the Giant Steps Robot.  He has been a member of (Beast, Please Be Still), Yellow Hat 
 Band, and others. 
 </p>
-
+-->
 
 </div> <!-- row span6 -->
     </div> <!-- featurette -->
