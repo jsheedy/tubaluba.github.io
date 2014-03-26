@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Tubaluba Brass Band from Seattle, WA</title>
-    <meta name="description" content="Tubaluba is a Seattle based brass band.  With roots in the New Orleans style, their style is described as Jambalaya Brass Pop" />
+    <meta name="description" content="Tubaluba is a Seattle based brass band.  With roots in the New Orleans style, their style is described as Big Strut" />
     <meta name="keywords" content="tubaluba,brass,band,seattle" />
 
     <!--
@@ -171,57 +171,7 @@
       <a class="anchor" name="shows"></a>
       <div class="box calendar">
         <h2 class="box-heading">Upcoming Shows</h2>
-
-  <div class="entry">
-      <div class="date">3/4/2014, 10:30pm</div>
-      <div class="venue"><a target="_blank" href="http://www.tractortavern.com/">Tractor Tavern</a></div>
-      <div class="address">5213 Ballard Ave NW, Seattle</div>
-      
-  <p>
-Mardi Gras at the Tractor Tavern with Tubaluba, Soul Senate, and one more!
-  </p>
-  </div>
-
-  <div class="entry">
-      <div class="date">3/8/2014</div>
-      <div class="venue"><a target="_blank" href="http://www.elliottbaybrewing.com/locations-menus/burien/">Elliott Bay Brewing, Burien</a></div>
-      <div class="address">255 SW 152nd St, Burien WA</div>
-      
-  <p>
-  </p>
-  </div>
-
-  <div class="entry">
-      <div class="date">8/29/2014</div>
-      <div class="venue">The Cap Sante Summer Concerts @ Seafarers Memorial Park</div>
-      <div class="address">Seafarers Memorial Park, Anacortes WA</div>
-      
-  <p>
-  </p>
-  </div>
-  <!--
-  <div class="entry">
-      <div class="date">10/26/2013</div>
-      <div class="venue"><a target="_blank" href="">Post</a></div>
-      <div class="address">1914 Post Alley, Seattle</div>
-      <p>
-  Spooky Halloween time is NEAR!!! Here are your plans for the night of October 26th – the 3rd Annual TUBALUBA Halloween show partnering with Market Ghost Tours and Espresso. We wouldn’t miss it… for the world. 
-      </p>
-          <a data-toggle="lightbox" href="#poster">
-              <img style="width:100%" src="img/posters/tubalubahalloween.jpg" />
-          </a>
-  </div>
-  -->
-<!--
-          <div class="entry">
-              <div class="date">12/31/2013</div>
-              <div class="venue"><a target="_blank" href="http://www.firstnighttacoma.org/">First Night Tacoma</a></div>
-              <div class="address">Tacoma, WA</div>
-              <p>
-              </p>
-          </div>
--->
-
+            <!-- INSERT SHOWS HERE -->
           </div> <!-- box -->
         </div> <!-- left col -->
 
@@ -267,6 +217,99 @@ Mardi Gras at the Tractor Tavern with Tubaluba, Soul Senate, and one more!
         })
       }(window.jQuery)
     </script>
+
+    <!-- calendar -->
+    <script type="text/javascript">
+        var jqxhr = $.getJSON( "tubaluba-calendar.json")
+          .done(function(data) {
+            var container = $('.calendar');
+            var twoDaysAgo = (new Date()).valueOf() / 1000 - 86400*2;
+            $.each(data, function(i, item) {
+                  
+                  var date_obj = new Date(item.date);
+                  var display = "block";
+                    if (date_obj.valueOf()/1000 < twoDaysAgo) {
+                      var display = "none";
+                        
+                    }
+                  var e = $('<div class="entry">');
+                  e.css('display', display);
+                  var fb = $('<a target="_blank" class="fbevent">');
+                  if (item.facebook) {
+                    fb_image = new Image();
+                    fb_image.src = "img/facebook-icon.png"; 
+                   fb.attr('href', item.facebook); 
+                    fb.append(fb_image);
+                  }
+                  var d = $('<div class="date">');
+                    var time = ""; 
+                    if (item.time) {
+                        time = item.time;
+                    }
+                    d.html(date_obj.toDateString() + " " + time);
+                  var venue = $('<div class="venue">');
+                    
+                    if (item.venue.url) {
+                        var l = $('<a>');
+                        l.html(item.venue.name);
+                        l.attr('href', item.venue.url);
+                        l.attr('target', "_blank");
+                        venue.append(l);
+                    } else {
+                        venue.html(item.venue.name);
+                    }
+                  var address = $('<div class="address">');
+                    address.html('<a target="_blank" href="http://maps.google.com?q='+item.venue.address + '">'+item.venue.address+'</a>');
+                  var description = $('<p>');
+                    description.html(item.description);
+                  var poster=null;
+                  if (item.poster) {
+                      poster = $('<div>');
+                      var poster_link = $('<a data-toggle="lightbox" href="#poster-'+ item.id +'">');
+                        var img = $('<img style="width:100%"/>');
+                        img.attr('src', item.poster);
+                      poster_link.append(img);
+
+                    var lightbox = $('<div id="poster-' + item.id + '" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">' +
+                        '<div class="lightbox-dialog">' +
+                            '<div class="lightbox-content">' +
+                                '<img src="' + item.poster + '">' +
+                                '<div class="lightbox-caption">' +
+                                '</div>' + 
+                            '</div>' +
+                        '</div>' +
+                    '</div>');
+                    poster.append(poster_link);
+                    poster.append(lightbox);
+
+                  }
+
+                e.append(fb); 
+                e.append(d); 
+                e.append(venue); 
+                e.append(address); 
+                e.append(description); 
+                e.append(poster); 
+                container.append(e);
+            });
+            var l = $('<a style="margin: 110px; font-size: 2em;" href="#past" name="past" id="past"> [past shows] </a>');
+            l.click(function() {
+                $('.calendar .entry').css('display', 'block');
+                $('#past').hide();
+            });
+
+          container.append('<p style="height: 7px">');
+          container.append(l);
+          })
+          .fail(function() {
+            console.log( "error" );
+          })
+          .always(function() {
+            console.log( "complete" );
+          });
+        
+    </script>
+
     <!-- analytics -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
