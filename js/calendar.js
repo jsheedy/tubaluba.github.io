@@ -5,7 +5,11 @@ function calendar() {
             var twoDaysAgo = (new Date()).valueOf() / 1000 - 86400*2;
             $.each(data, function(i, item) {
 
-                  var date_obj = new Date(Date.parse(item.date));
+                  //var date_obj = new Date(item.date.split('-'));
+                  //var date_obj = new Date(Date.parse(item.date));
+                    // ugh.   month is 0 based but the other args to Date aren't.  timzones..  fuck
+                    x=$.map(item.date.split('-'), function(e,i) {return parseInt(e);})
+                    var date_obj = new Date(x[0],x[1]-1,x[2]);
                   var display = "block";
                     if (date_obj.valueOf()/1000 < twoDaysAgo) {
                       var display = "none";
