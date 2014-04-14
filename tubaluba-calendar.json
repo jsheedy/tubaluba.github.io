@@ -83,7 +83,8 @@
       "url": "http://www.nectarlounge.com",
       "address": "412 N 36th Street, Seattle"
     },
-    "poster": "img/posters/nectar-poster-2014-04-26.jpg"
+    "poster": "img/posters/nectar-poster-2014-04-26.jpg",
+    "facebook": "https://www.facebook.com/events/480544052055701/"
   },
 
   {
@@ -105,6 +106,45 @@
       "address": "216 Union Street, Seattle"
     }
   },
+    {
+    "id": 12,
+    "date": "2014-07-02",
+    "venue": {
+      "name": "Boom Boom Room",
+      "url": "http://www.boomboomblues.com",
+      "address": "1601 Fillmore, San Francisco CA"
+    }
+  },
+
+    {
+    "id": 13,
+    "date": "2014-07-03",
+    "venue": {
+      "name": "Crazy Horse Saloon",
+      "address": "230 Commercial St, Nevada City, CA"
+    }
+  },
+    {
+    "id": 14,
+    "date": "2014-07-05",
+    "venue": {
+      "name": "Heavenly Village Summer Concert Series",
+      "url": "http://www.theshopsatheavenly.com/events.php?month=7&year=2014",
+      "address": "1001 Heavenly Village Way, South Lake Tahoe, CA"
+    }
+  },
+    {
+    "id": 15,
+    "date": "2014-07-12",
+    "venue": {
+      "name": "Redmond Derby Days",
+      "url": "http://www.redmondderbydays.com/",
+      "address": "Redmond, WA"
+    }
+  },
+
+
+
 
 
       {
