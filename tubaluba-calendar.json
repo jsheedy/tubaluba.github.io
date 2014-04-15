@@ -96,6 +96,16 @@
       "address": "114 E Sixth Street, Moscow, ID"
     }
   },
+  {
+    "id": 16,
+    "date": "2014-05-17",
+    "venue": {
+      "name": "Reef",
+      "url": "http://www.reefboise.com",
+      "address": "105 S. 6th St. Boise, ID"
+    }
+  },
+
 
     {
     "id": 11,
@@ -142,10 +152,6 @@
       "address": "Redmond, WA"
     }
   },
-
-
-
-
 
       {
         "id": 6,
