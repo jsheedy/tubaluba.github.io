@@ -1,5 +1,7 @@
 RewriteEngine on
 
+RewriteRule ^/cgi-bin/update.cgi$ /cgi-bin/update.cgi [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . / [L,R=301]
 
