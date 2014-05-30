@@ -165,6 +165,18 @@
   },
 
       {
+        "id": 18,
+        "date": "2014-08-24",
+        "time": "2pm",
+        "venue": {
+          "name": "Seattle International Beerfest",
+          "address": "Pavilion Stage, Seattle Center",
+          "url": "http://www.seattlebeerfest.com/"
+        }
+      },
+
+
+      {
         "id": 6,
         "date": "2014-08-29",
         "venue": {
