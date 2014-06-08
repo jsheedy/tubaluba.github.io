@@ -127,13 +127,26 @@
     }
   },
     {
+    "id": 18,
+    "date": "2014-06-18",
+    "venue": {
+      "name": "Living Computer Museum",
+      "url": "http://www.seattlemet.com/events/generocity-june-2014",
+      "address": "2245 1st Ave S Seattle, WA 98134"
+    },
+    "description": "You're invited to Generocity, a night to learn, celebrate, and enjoy the non-profits and individuals that make our city the most generous on earth.  At the Living Computer Museum!"
+  },
+
+    {
     "id": 16,
     "date": "2014-06-27",
     "venue": {
       "name": "Tractor Tavern",
       "url": "http://www.tractortavern.com/",
       "address": "5213 Ballard Ave NW, Seattle, WA 98107"
-    }
+    },
+    "description": "Album release show!! We're excited about our new vinyl EP!",
+    "facebook": "https://www.facebook.com/events/1423828267887203/"
   },
 
 
