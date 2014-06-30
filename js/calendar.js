@@ -4,19 +4,16 @@ function calendar() {
             var container = $('.calendar');
             var twoDaysAgo = (new Date()).valueOf() / 1000 - 86400*2;
             $.each(data, function(i, item) {
-
-                  //var date_obj = new Date(item.date.split('-'));
-                  //var date_obj = new Date(Date.parse(item.date));
                     // ugh.   month is 0 based but the other args to Date aren't.  timzones..  fuck
                     x=$.map(item.date.split('-'), function(e,i) {return parseInt(e);})
                     var date_obj = new Date(x[0],x[1]-1,x[2]);
-                  var display = "block";
+                    var display = "block";
                     if (date_obj.valueOf()/1000 < twoDaysAgo) {
                       var display = "none";
-
                     }
                   var e = $('<div class="entry">');
                   e.css('display', display);
+
                   var fb = $('<a target="_blank" class="fbevent">');
                   if (item.facebook) {
                     fb_image = new Image();
@@ -24,6 +21,14 @@ function calendar() {
                    fb.attr('href', item.facebook);
                     fb.append(fb_image);
                   }
+
+                  var tickets = $('<a target="_blank" class="">');
+                  if (item.ticketUrl) {
+                    tickets.attr('href', item.ticketUrl);
+                    tickets.html('[buy tickets]');
+                  }
+
+
                   var d = $('<div class="date">');
                     var time = "";
                     if (item.time) {
@@ -72,6 +77,7 @@ function calendar() {
                 e.append(venue);
                 e.append(address);
                 e.append(description);
+                e.append(tickets);
                 e.append(poster);
                 container.append(e);
             });

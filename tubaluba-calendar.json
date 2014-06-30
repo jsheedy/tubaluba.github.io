@@ -168,7 +168,8 @@
       "address": "1001 Heavenly Village Way, South Lake Tahoe, CA"
     }
   },
-    {
+
+  {
     "id": 15,
     "date": "2014-07-12",
     "venue": {
@@ -177,7 +178,17 @@
       "address": "Redmond, WA"
     }
   },
-
+    {
+    "id": 18,
+    "date": "2014-07-31",
+    "venue": {
+      "name": "The Crocodile",
+      "url": "http://www.thecrocodile.com/",
+      "address": "2200 2nd Avenue, Seattle, Washington 98121"
+    },
+    "description": "With <a target='_blank' href='http://thesoulrebels.com/'>Soul Rebels</a>",
+    "ticketUrl": "http://www.thecrocodile.com/event/593215-soul-rebels-seattle/"
+  },
       {
         "id": 18,
         "date": "2014-08-24",
