@@ -115,8 +115,6 @@
     }
   },
 
-
-
     {
     "id": 11,
     "date": "2014-05-24",
@@ -138,7 +136,7 @@
   },
 
     {
-    "id": 16,
+    "id": 22,
     "date": "2014-06-27",
     "venue": {
       "name": "Tractor Tavern",
@@ -179,7 +177,38 @@
     }
   },
     {
-    "id": 18,
+    "id": 23,
+    "date": "2014-07-23",
+    "time": "12pm",
+    "venue": {
+      "name": "Out to Lunch Concert Series",
+      "url": "http://www.downtownseattle.com/Summer/otl.php",
+      "address": "999 Third, Wells Fargo Center"
+    }
+  },
+  {
+    "id": 24,
+    "date": "2014-07-25",
+    "time": "9pm",
+    "venue": {
+      "name": "Emerald of Siam",
+      "url": "http://www.emeraldofsiam.com/music.html",
+      "address": "1314 Jadwin Ave, Richland, WA 99354"
+    }
+  },
+    {
+    "id": 25,
+    "date": "2014-07-26",
+    "time": "12:30pm",
+    "venue": {
+      "name": "Oregon Brewfest",
+      "url": "http://www.oregonbrewfest.com/index2.php?p=entertainment",
+      "address": "Tom McCall Waterfront Park, Portland, OR"
+    }
+  },
+
+    {
+    "id": 19,
     "date": "2014-07-31",
     "venue": {
       "name": "The Crocodile",
@@ -190,7 +219,7 @@
     "ticketUrl": "http://www.thecrocodile.com/event/593215-soul-rebels-seattle/"
   },
       {
-        "id": 18,
+        "id": 20,
         "date": "2014-08-24",
         "time": "2pm",
         "venue": {
@@ -210,7 +239,7 @@
         }
       },
       {
-        "id": 19,
+        "id": 21,
         "date": "2014-09-06",
         "venue": {
           "name": "Nectar",
