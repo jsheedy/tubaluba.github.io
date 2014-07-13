@@ -19,7 +19,6 @@
     }
   },
 
-
   {
     "id": 4,
     "date": "2014-03-04",
@@ -194,7 +193,8 @@
       "name": "Emerald of Siam",
       "url": "http://www.emeraldofsiam.com/music.html",
       "address": "1314 Jadwin Ave, Richland, WA 99354"
-    }
+    },
+    "facebook": "https://www.facebook.com/events/295610497282828/"
   },
     {
     "id": 25,
@@ -204,7 +204,8 @@
       "name": "Oregon Brewfest",
       "url": "http://www.oregonbrewfest.com/index2.php?p=entertainment",
       "address": "Tom McCall Waterfront Park, Portland, OR"
-    }
+    },
+    "facebook": "https://www.facebook.com/OregonBrewersFestival"
   },
 
       {
@@ -215,7 +216,8 @@
           "name": "Seattle International Beerfest",
           "address": "Pavilion Stage, Seattle Center",
           "url": "http://www.seattlebeerfest.com/"
-        }
+        },
+        "facebook":"https://www.facebook.com/pages/SEATTLE-INTERNATIONAL-BEERFEST/125784954105763"
       },
 
 
