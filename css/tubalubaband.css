@@ -15,6 +15,9 @@ body {
   background: url(../img/logo-100x100.png) fixed ; 
   background-size: 100px 100px;
 }
+a {
+    color: yellow;
+}
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
