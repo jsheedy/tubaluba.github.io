@@ -1,0 +1,46 @@
+<h2 class="box-heading">Upcoming Shows</h2>
+{{#entries}}
+  <div class="entry">
+    {{#if facebook}}
+      <a target="_blank" href="{{facebook}}" class="fbevent">
+        <img src="img/facebook-icon.png">
+      </a>
+    {{/if}}
+    <div class="date">
+      {{formatted_date}}
+      {{time}}
+    </div>
+    <div class="venue">
+      {{#if venue.url}}
+        <a target="_blank" href="{{venue.url}}">{{venue.name}}</a>
+      {{else}}
+        {{venue.name}}
+      {{/if}}
+    
+      {{#if venue.address}}
+      <div class="address">
+        <a target="_blank" href="http://maps.google.com?q={{venue.address}}">{{venue.address}}</a>
+      </div>
+      {{/if}}
+    </div>
+
+    <p>{{&description}}</p>
+    {{#if poster}}
+      <div id="poster-{{id}}" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="lightbox-dialog">
+            <div class="lightbox-content">
+                <img src="{{poster}}">
+                <div class="lightbox-caption">
+                </div>
+            </div>
+        </div>
+      </div>
+      <a data-toggle="lightbox" href="#poster-{{id}}">
+        <img style="width: 100%" src="{{poster}}">
+      </a>
+    {{/if}}
+    {{#if ticketUrl}}
+      <a target="_blank" href="{{ticketUrl}}">[buy tickets]</a>
+    {{/if}}
+  </div>
+{{/entries}}

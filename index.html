@@ -19,9 +19,13 @@
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="js/handlebars.runtime-v1.3.0.js"></script>
+
+    <script src="js/calendar-template.js"></script>
     <script src="js/calendar.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/jquery.mailme.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-lightbox.min.js"></script>
@@ -165,57 +169,6 @@
       <a class="anchor" name="shows"></a>
       <div class="box calendar">
         <div id="calendarContent">Loading calendar content...</div>
-        <script id="calendarTemplate" type="x-tmpl-mustache">
-
-          <h2 class="box-heading">Upcoming Shows</h2>
-          {{#entries}}
-            <div class="entry">
-              {{#facebook}}
-                <a target="_blank" href="{{facebook}}" class="fbevent">
-                  <img src="img/facebook-icon.png">
-                </a>
-              {{/facebook}}
-              <div class="date">
-                {{formatted_date}}
-                {{time}}
-              </div>
-              <div class="venue">
-                {{#venue.url}}
-                  <a target="_blank" href="{{venue.url}}">{{venue.name}}</a>
-                {{/venue.url}}  
-                {{^venue.url}}
-                  {{venue.name}}
-                {{/venue.url}}
-              
-                {{#venue.address}}
-                <div class="address">
-                  <a target="_blank" href="http://maps.google.com?q={{venue.address}}">{{venue.address}}</a>
-                </div>
-                {{/venue.address}}
-              </div>
-
-              <p>{{&description}}</p>
-              {{#poster}}
-                <div id="poster-{{id}}" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
-                  <div class="lightbox-dialog">
-                      <div class="lightbox-content">
-                          <img src="{{poster}}">
-                          <div class="lightbox-caption">
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <a data-toggle="lightbox" href="#poster-{{id}}">
-                  <img style="width: 100%" src="{{poster}}">
-                </a>
-              {{/poster}}
-              {{#ticketUrl}}
-                <a target="_blank" href="{{ticketUrl}}">[buy tickets]</a>
-              {{/ticketUrl}}
-            </div>
-          {{/entries}}
-        </script>
-
       </div> <!-- box -->
     </div> <!-- left col -->
 
