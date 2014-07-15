@@ -188,3 +188,30 @@ a.anchor{
     border-top: 3px solid rgb(180,150,0);
     margin-top: 20px;
 }
+
+.quotes h2 {
+    margin-bottom: 20px;
+}
+
+blockquote {
+  border-left: 0px;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-style: italic;
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-bottom: 10px;
+}
+blockquote:before {
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0em;
+  margin-right: 8px;
+  vertical-align: -0.3em;
+}
+blockquote:after {
+    content:close-quote;
+    font-size:2em;
+    line-height:.1em;
+    margin-right: 20px;
+    vertical-align:-.3em;
+}
