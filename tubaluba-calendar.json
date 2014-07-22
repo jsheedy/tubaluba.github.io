@@ -207,6 +207,16 @@
     },
     "facebook": "https://www.facebook.com/OregonBrewersFestival"
   },
+    {
+    "id": 26,
+    "date": "2014-07-26",
+    "time": "7:30pm",
+    "venue": {
+      "name": "Suncadia Summer Concert Series",
+      "url": "http://www.suncadiaresort.com/events/07262014-suncadia-summer-concert-series-tuba-luba",
+      "address": "Suncadia Village Amphitheater and Pavilion, Cle Elum, WA"
+    }
+  },
 
       {
         "id": 20,
