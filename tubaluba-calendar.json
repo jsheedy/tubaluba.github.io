@@ -217,6 +217,18 @@
       "address": "Suncadia Village Amphitheater and Pavilion, Cle Elum, WA"
     }
   },
+    {
+    "id": 27,
+    "date": "2014-07-30",
+    "time": "8:30pm",
+    "venue": {
+      "name": "Concert Window",
+      "url": "http://www.concertwindow.com/shows/7487-great-northwest-fest-tubaluba"
+    },
+    "facebook": "https://www.facebook.com/events/515931815220207/",
+    "description": "Tubaluba will be performing a live webshow on Concert Window, which starts at 8:30pm (11:30pm EDT) on July 30. Wherever you are in the world, you can tune in! We'll be taking requests and answering your questions. You can purchase online tickets on a pay-what-you-want basis starting now at the link below. The webshow will not be recorded – it's offered in real time. We hope to see everyone tuning in!!"
+  },
+
 
       {
         "id": 20,

@@ -20,8 +20,8 @@ Calendar = {
         self.render(self.Entries);
         self.cache = data;
       })
-      .fail(function() {
-        console.log( "error importing calendar" );
+      .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log( "error importing calendar: " + textStatus, errorThrown );
       });
   },
 
