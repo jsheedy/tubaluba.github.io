@@ -7,7 +7,8 @@
     <meta name="keywords" content="tubaluba,brass,band,seattle" />
     <meta name="author" content="Tubaluba">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ 
     <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
     <link href="css/tubalubaband.css" rel="stylesheet">
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
@@ -31,17 +32,19 @@
 
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <a class="brand" href="#">TUBALUBA</a>
-        <div class="">
-          <ul class="nav pull-right">
+      <div class="container-fluid">
+        <div class="navbar-header pull-left">
+          <a class="brand" href="#">TUBALUBA</a>
+        </div>
+<!--         <div class="navbar-header pull-right">
+ -->          <ul class="nav navbar-right">
             <li><a href="#band">Band</a></li>
             <li><a href="#shows">Shows</a></li>
             <li><a href="#video">Video</a></li>
             <li><a href="#booking">Booking</a></li>
           </ul>
-        </div>
-      </div><!-- /.navbar-inner -->
+<!--         </div>
+ -->      </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
 
     <div id="myCarousel" class="row carousel slide">
@@ -68,15 +71,14 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
 
-    <div class="row-fluid">
+    <div class="container-fluid">
+      <div class="row">
 
-      <div class="span6">
-
-        <div class="box">
-          <a target="_blank" style="float:right;" href="https://www.facebook.com/TUBALUBA.BAND"><img src="img/facebook-icon.png" /></a>
-          <div class="">
+        <div class="col-md-6">
+          <div class="box connect"> <!-- connect -->
+            <a target="_blank" style="float:right;" href="https://www.facebook.com/TUBALUBA.BAND"><img src="img/facebook-icon.png" /></a>
             <div id="mc_embed_signup">
-              <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;margin:0px;width:255px;">
+              <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;margin:0px;width:200px;">
                 <label for="mce-EMAIL">Subscribe to our email list</label>
                 <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                 <div class="clear">
@@ -85,80 +87,78 @@
               </form>
             </div>
           </div>
+
+          <div class="box calendar"> <!-- calendar -->
+            <a class="anchor" name="shows"></a>
+            <div id="calendarContent">Loading calendar content...</div>
+          </div>
+
+          <a class="anchor" name="quotes"></a>
+          <div class="box quotes">
+            <h2 class="box-heading">Quotes</h2>
+            <blockquote>We had so many people tell us it was the best wedding they’d ever been too!!! We feel that was because of Tubaluba. We knew 1.5 years ago that if we could make it work, it would be the centerpiece of our dream wedding. You guys (and gal) made it work and it was everything and more than we expected. 
+            </blockquote>
+
+            <blockquote>Just wanted to quickly follow up with you regarding your stellar performance at our wedding reception on the 11th of August. We had such a good time and you guys were a hit. EVERYONE was commenting about how much fun the reception was and how awesome you guys were. </blockquote>
+
+            <blockquote>You guys rocked the party, made our wedding one of the best weddings in history. (Or, so I'm told:) </blockquote>
+
+            <blockquote>Tubaluba is Seattle's finest New Orleans-style Second Line band. </blockquote>
+            <a href="http://jazznowseattle.com/jazz-now-seattle-episode-33/" title="Jazz Now! Seattle" target="_blank"> - Jazz Now! Seattle</a>
+
+            <blockquote>Tubaluba is a local band in the New Orleans 2nd Line style, serving up New Orleans classics mixed with R&amp;B tunes and booty-shaking originals. If you like Rebirth Brass band, Dirty Dozen Brass Band, Mama Digdown's Brass Band, bourbon, hot sauce, or HONK! Fest West, these cats are your huckleberry.</blockquote>
+
+            <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
+          </div>
         </div>
 
-        <div class="box calendar">
-          <a class="anchor" name="shows"></a>
-          <div id="calendarContent">Loading calendar content...</div>
-        </div>
+        <div class="col-md-6">
+          <div class="box"> <!-- video -->
+            <a class="anchor" name="video"></a>
+            <iframe width="100%" height="370" src="//www.youtube.com/embed/zJcg7zqqI6Y" frameborder="0" allowfullscreen></iframe>
+          </div>
 
-        <a class="anchor" name="quotes"></a>
-        <div class="box quotes">
-          <h2 class="box-heading">Quotes</h2>
-          <blockquote>We had so many people tell us it was the best wedding they’d ever been too!!! We feel that was because of Tubaluba. We knew 1.5 years ago that if we could make it work, it would be the centerpiece of our dream wedding. You guys (and gal) made it work and it was everything and more than we expected. 
-          </blockquote>
+          <div class="box"> <!-- booking -->
+            <a class="anchor" name="booking"></a>
+            <h2 class="box-heading">Booking</h2>
+            <p class="lead">To book Tubaluba, please contact In The Pocket Artists:</p>
+            <p>
+              <a href="http://www.InThePocketArtists.com">
+                <img src="img/inthepocket.jpg">
+              </a>
+            </p>
+            <p>Phone: 541-550-7260</p>
+            <p>Email: <span class="mailme">info at inthepocketartists dot com</span></p>
 
-          <blockquote>Just wanted to quickly follow up with you regarding your stellar performance at our wedding reception on the 11th of August. We had such a good time and you guys were a hit. EVERYONE was commenting about how much fun the reception was and how awesome you guys were. </blockquote>
-
-          <blockquote>You guys rocked the party, made our wedding one of the best weddings in history. (Or, so I'm told:) </blockquote>
-
-          <blockquote>Tubaluba is Seattle's finest New Orleans-style Second Line band. </blockquote>
-          <a href="http://jazznowseattle.com/jazz-now-seattle-episode-33/" title="Jazz Now! Seattle" target="_blank"> - Jazz Now! Seattle</a>
-
-          <blockquote>Tubaluba is a local band in the New Orleans 2nd Line style, serving up New Orleans classics mixed with R&amp;B tunes and booty-shaking originals. If you like Rebirth Brass band, Dirty Dozen Brass Band, Mama Digdown's Brass Band, bourbon, hot sauce, or HONK! Fest West, these cats are your huckleberry.</blockquote>
-
-          <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
-    
-        </div>
-      </div> <!-- left col -->
-    
-
-      <div class="box span6">
-        <a class="anchor" name="video"></a>
-        <iframe width="100%" height="370" src="//www.youtube.com/embed/zJcg7zqqI6Y" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="box span6">
-        <a class="anchor" name="booking"></a>
-        <h2 class="box-heading">Booking</h2>
-
-        <p class="lead">To book Tubaluba, please contact In The Pocket Artists:</p>
-        <p>
-          <a href="http://www.InThePocketArtists.com">
-            <img src="img/inthepocket.jpg">
-          </a>
-        </p>
-        <p>Phone: 541-550-7260</p>
-        <p>Email: <span class="mailme">info at inthepocketartists dot com</span></p>
-
-          <h3>Stage plots</h3>
-          <p><a target="_blank" href="img/Tubaluba-2014-Stage-Plot-copy.pdf">Tubaluba-Stage-Plot.pdf</a>
-          <p><a target="_blank" href="img/Tubaluba-2014-Marching-Stage-Plot-copy.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
-          <h3>Press</h3>
-          <p><a target="_blank" download="Tubaluba-press-photo.png" href="img/Tubaluba-press-photo.png">Press photo (color)</a>
-          <p><a target="_blank" download="Tubaluba-press-photo-bw.pdf" href="img/Tubaluba-press-photo-bw.pdf">Press photo (b/w)</a>
-          <p><a target="_blank" download="TubalubaPoster.jpg" href="img/TubalubaPoster.jpg">Tubaluba Poster 2014</a>
-
-        </div>
+            <h3>Stage plots</h3>
+            <p><a target="_blank" href="img/Tubaluba-2014-Stage-Plot-copy.pdf">Tubaluba-Stage-Plot.pdf</a>
+            <p><a target="_blank" href="img/Tubaluba-2014-Marching-Stage-Plot-copy.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
+            <h3>Press</h3>
+            <p><a target="_blank" download="Tubaluba-press-photo.png" href="img/Tubaluba-press-photo.png">Press photo (color)</a>
+            <p><a target="_blank" download="Tubaluba-press-photo-bw.pdf" href="img/Tubaluba-press-photo-bw.pdf">Press photo (b/w)</a>
+            <p><a target="_blank" download="TubalubaPoster.jpg" href="img/TubalubaPoster.jpg">Tubaluba Poster 2014</a>
+          </div>
 
 
-        <div class="box span6">
-          <a class="anchor" name="band"></a>
-          <h2 class="box-heading">The Band</h2>
-          <p>
-            Tubaluba is the brainchild of Josh “Papaluba” Wilson.  In 2009, Wilson gathered personnel with the philosophy that players had to be good, and players had to be cool.  Musically, Wilson hoped to capture the spirit of New Orleans, and convey it with a brass street band rhythm and style.  
-          </p>
-          <p>
-            The band still plays some of the brass band and vintage soul favorites that inspired it’s conception, but is steadily writing, developing, and performing it’s own repertoire.  Their self titled debut was released on Fat Tuesday 2012 to fanfare from Seattle’s KEXP radio, and the second album will be released as a vinyl 45 in July. 
-          </p>
-          <p>
-            Tubaluba has also conceived two signature events.  The first is an annual Halloween funeral procession through the streets of Seattle to a destination venue.  The second event is the Mardi Gras Party Bus.  For the past two Mardi Gras’, Tubaluba has filled a large coach bus with fans who then follow the band to several performances around town from noon to midnight.  This event gathers television, newspaper, radio, and blogging attention.
-          </p>
-          <p>
-            Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
-          </p>
-
-        </div>
-      </div>
+          <div class="box"> <!-- the band -->
+            <a class="anchor" name="band"></a>
+            <h2 class="box-heading">The Band</h2>
+            <p>
+              Tubaluba is the brainchild of Josh “Papaluba” Wilson.  In 2009, Wilson gathered personnel with the philosophy that players had to be good, and players had to be cool.  Musically, Wilson hoped to capture the spirit of New Orleans, and convey it with a brass street band rhythm and style.  
+            </p>
+            <p>
+              The band still plays some of the brass band and vintage soul favorites that inspired it’s conception, but is steadily writing, developing, and performing it’s own repertoire.  Their self titled debut was released on Fat Tuesday 2012 to fanfare from Seattle’s KEXP radio, and the second album will be released as a vinyl 45 in July. 
+            </p>
+            <p>
+              Tubaluba has also conceived two signature events.  The first is an annual Halloween funeral procession through the streets of Seattle to a destination venue.  The second event is the Mardi Gras Party Bus.  For the past two Mardi Gras’, Tubaluba has filled a large coach bus with fans who then follow the band to several performances around town from noon to midnight.  This event gathers television, newspaper, radio, and blogging attention.
+            </p>
+            <p>
+              Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
+            </p>
+          </div>
+        </div> <!--col-md-6-->
+      </div> <!-- row-fluid -->
+    </div> <!-- container-fluid -->
 
     <div class="container marketing">
 
