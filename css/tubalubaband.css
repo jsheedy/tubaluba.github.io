@@ -133,9 +133,12 @@ a.anchor{
 }
 .calendar .fbevent {
     float: left;
-    margin-top: 4px;
+    margin-top: 17px;
     margin-right: 10px;
     width: 30px;
+}
+.calendar .fbevent img {
+  width:30px;
 }
 
 .entry {
@@ -169,8 +172,11 @@ blockquote:after {
     margin-right: 20px;
     vertical-align:-.3em;
 }
+.connect a {
+  margin-right:-14px;
+}
 .connect img {
-  width: 90px;
+  width: 120px;
 }
 
 @media ( max-width: 480px ) {
@@ -179,5 +185,17 @@ blockquote:after {
   }*/
   .navbar .brand {
     font-size: 30px;
+  }
+  h2.box-heading {
+    font-size: 25px;
+  }
+    #calendarContent .date {
+    font-size: 20px;
+  }
+  iframe {
+    height: 250px;
+  }
+  #inthepocketlogo {
+    width: 100%;
   }
 }
