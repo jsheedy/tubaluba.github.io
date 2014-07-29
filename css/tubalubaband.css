@@ -172,3 +172,9 @@ blockquote:after {
 .connect img {
   width: 90px;
 }
+
+@media ( max-width: 480px ) {
+/*  .box {
+     font-size: 40px;
+  }*/
+}
