@@ -90,20 +90,8 @@ a {
   margin-top: 10px;
 }
 
-
-/* Center align the text within the three columns below the carousel */
-.marketing {
-    margin-top: 20px;
-}
-.marketing .span4 {
-    text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .span4 p {
-  margin-left: 10px;
-  margin-right: 10px;
+.row {
+  margin-bottom: 20px;
 }
 
 .box-heading {
@@ -178,6 +166,11 @@ blockquote:after {
 .connect img {
   width: 120px;
 }
+
+iframe[id^='twitter-widget-']{ 
+  width:100% !important;
+}
+
 
 @media ( max-width: 480px ) {
 /*  .box {

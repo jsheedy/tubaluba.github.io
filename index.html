@@ -30,6 +30,8 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-lightbox.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+
   </head>
 
   <body>
@@ -173,31 +175,29 @@
           </div>
         </div> <!--col-md-6-->
       </div> <!-- row-fluid -->
-    </div> <!-- container-fluid -->
+<!--     </div> <!-- container-fluid
 
-    <div class="container marketing">
+    <div class="container marketing"> -->
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="span4">
+        <div class="col-sm-4">
           <p>
             <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/777015&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
           </p>
-        </div><!-- /.span4 -->
+        </div>
+        <div class="col-sm-4">
 
-        <div class="span4">
           <p><a class="twitter-timeline" 
             href="https://twitter.com/TubalubaBand" 
             data-widget-id="387043083591757824"
             data-border-color="#ffffff">Tweets by @TubalubaBand</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </p>
-        </div><!-- /.span4 -->
+        </div>
+        <div class="col-sm-4" id="instafeed">
 
-        <div class="span4">
-          <!-- SnapWidget -->
-          <iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDE1MHwyfDV8fG5vfDV8bm9uZXxvblN0YXJ0fG5v&v=191013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:310px; height: 700px" ></iframe>
-        </div><!-- /.span4 -->
+        </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
 
@@ -207,7 +207,15 @@
         Calendar.init(calendarContainer);
         $('span.mailme').mailme();
         $('#myCarousel').carousel();
+        var feed = new Instafeed({
+          get: 'user',
+          userId: 363408176,
+          accessToken: '363408176.467ede5.4c61508b403943589d7ffa4535137baf',
+          limit: 10
+        });
+        feed.run();
       });
+
     </script>
 
     <script>
