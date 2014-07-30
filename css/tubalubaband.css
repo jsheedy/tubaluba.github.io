@@ -101,7 +101,7 @@ a {
   letter-spacing: -1px;
 }
 
-div.box {
+.container-fluid div.box {
   background-color: rgba(0,0,0,.80);
   padding: 20px;
   margin-top: 30px;
@@ -160,8 +160,12 @@ blockquote:after {
     margin-right: 20px;
     vertical-align:-.3em;
 }
-.connect a {
+.connect > a {
   margin-right:-14px;
+  z-index: 2;
+}
+.connect #mc_embed_signup {
+  z-index: 1;
 }
 .connect img {
   width: 120px;
@@ -173,9 +177,7 @@ iframe[id^='twitter-widget-']{
 
 
 @media ( max-width: 480px ) {
-/*  .box {
-     font-size: 40px;
-  }*/
+
   .navbar .brand {
     font-size: 30px;
   }
