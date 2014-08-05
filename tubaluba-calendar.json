@@ -260,5 +260,14 @@
           "address": "412 N 36th Street, Seattle"
         },
         "description": "TubaLuba 9-10, Cascadia '10 10:15-11:15, Five Alarm Funk 11:30-1:30"
+      },
+      {
+        "id": 28,
+        "date": "2014-10-03",
+        "venue": {
+          "name": "Dante's",
+          "url": "http://www.danteslive.com/",
+          "address": "350 West Burnside Street, Portland, OR 97209"
+        }
       }
 ]
