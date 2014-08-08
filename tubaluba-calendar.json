@@ -228,46 +228,45 @@
     "facebook": "https://www.facebook.com/events/515931815220207/",
     "description": "Tubaluba will be performing a live webshow on Concert Window, which starts at 8:30pm (11:30pm EDT) on July 30. Wherever you are in the world, you can tune in! We'll be taking requests and answering your questions. You can purchase online tickets on a pay-what-you-want basis starting now at the link below. The webshow will not be recorded – it's offered in real time. We hope to see everyone tuning in!!"
   },
-
-
-      {
-        "id": 20,
-        "date": "2014-08-24",
-        "time": "2pm",
-        "venue": {
-          "name": "Seattle International Beerfest",
-          "address": "Pavilion Stage, Seattle Center",
-          "url": "http://www.seattlebeerfest.com/"
-        },
-        "facebook":"https://www.facebook.com/pages/SEATTLE-INTERNATIONAL-BEERFEST/125784954105763"
-      },
-
-
-      {
-        "id": 6,
-        "date": "2014-08-29",
-        "venue": {
-          "name": "The Cap Sante Summer Concerts @ Seafarers Memorial Park",
-          "address": "Seafarers Memorial Park, Anacortes WA"
-        }
-      },
-      {
-        "id": 21,
-        "date": "2014-09-06",
-        "venue": {
-          "name": "Nectar",
-          "url": "http://www.nectarlounge.com",
-          "address": "412 N 36th Street, Seattle"
-        },
-        "description": "TubaLuba 9-10, Cascadia '10 10:15-11:15, Five Alarm Funk 11:30-1:30"
-      },
-      {
-        "id": 28,
-        "date": "2014-10-03",
-        "venue": {
-          "name": "Dante's",
-          "url": "http://www.danteslive.com/",
-          "address": "350 West Burnside Street, Portland, OR 97209"
-        }
-      }
+  {
+    "id": 20,
+    "date": "2014-08-24",
+    "time": "2pm",
+    "venue": {
+      "name": "Seattle International Beerfest",
+      "address": "Pavilion Stage, Seattle Center",
+      "url": "http://www.seattlebeerfest.com/"
+    },
+    "facebook":"https://www.facebook.com/pages/SEATTLE-INTERNATIONAL-BEERFEST/125784954105763"
+  },
+  {
+    "id": 6,
+    "date": "2014-08-29",
+    "venue": {
+      "name": "The Cap Sante Summer Concerts @ Seafarers Memorial Park",
+      "address": "Seafarers Memorial Park, Anacortes WA"
+    }
+  },
+  {
+    "id": 21,
+    "date": "2014-09-06",
+    "venue": {
+      "name": "Nectar",
+      "url": "http://www.nectarlounge.com",
+      "address": "412 N 36th Street, Seattle"
+    },
+    "description": "TubaLuba 9-10, Cascadia '10 10:15-11:15, Five Alarm Funk 11:30-1:30",
+    "facebook": "https://www.facebook.com/events/1434555460159475/",
+    "poster": "img/posters/Nectar-Tubaluba-5AlarmFunk-Cascadia10-20140905.png",
+    "tickets": "http://www.ticketweb.com/fb/5135975/nectarlounge"
+  },
+  {
+    "id": 28,
+    "date": "2014-10-03",
+    "venue": {
+      "name": "Dante's",
+      "url": "http://www.danteslive.com/",
+      "address": "350 West Burnside Street, Portland, OR 97209"
+    }
+  }
 ]
