@@ -83,17 +83,9 @@ function program8(depth0,data) {
 function program10(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n      <div id=\"poster-";
-  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\" style=\"display:none\" class=\"lightbox fade\"  tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"lightbox-dialog\">\n            <div class=\"lightbox-content\">\n                <img src=\"";
+  buffer += "\n      <a data-toggle=\"lightbox\" data-type=\"image\" href=\"";
   if (helper = helpers.poster) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.poster); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\">\n                <div class=\"lightbox-caption\">\n                </div>\n            </div>\n        </div>\n      </div>\n      <a data-toggle=\"lightbox\" href=\"#poster-";
-  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\">\n        <img style=\"width: 100%\" src=\"";
   if (helper = helpers.poster) { stack1 = helper.call(depth0, {hash:{},data:data}); }

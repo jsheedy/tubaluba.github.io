@@ -26,16 +26,7 @@
 
     <p>{{&description}}</p>
     {{#if poster}}
-      <div id="poster-{{id}}" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="lightbox-dialog">
-            <div class="lightbox-content">
-                <img src="{{poster}}">
-                <div class="lightbox-caption">
-                </div>
-            </div>
-        </div>
-      </div>
-      <a data-toggle="lightbox" href="#poster-{{id}}">
+      <a data-toggle="lightbox" data-type="image" href="{{poster}}">
         <img style="width: 100%" src="{{poster}}">
       </a>
     {{/if}}
