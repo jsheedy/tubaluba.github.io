@@ -6,8 +6,11 @@
     <meta name="description" content="Tubaluba is a Seattle based brass band.  With roots in the New Orleans style, their style is described as Big Strut" />
     <meta name="keywords" content="tubaluba,brass,band,seattle" />
     <meta name="author" content="Tubaluba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ 
     <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
     <link href="css/tubalubaband.css" rel="stylesheet">
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
@@ -20,126 +23,109 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <script src="js/handlebars.runtime-v1.3.0.js"></script>
-
     <script src="js/calendar-template.js"></script>
     <script src="js/calendar.js"></script>
-
     <script src="js/jquery.mailme.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-lightbox.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="brand" href="#">TUBALUBA</a>
-        <div class="">
-          <ul class="nav pull-right">
-            <li><a href="#band">Band</a></li>
-            <li><a href="#shows">Shows</a></li>
-            <li><a href="#video">Video</a></li>
-  <!--
-              <li><a href="#photos">Photos</a></li>
-            -->
-            <li><a href="#booking">Booking</a></li>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+
+          <a class="brand" href="#">TUBALUBA</a>
+        </div>
+<!--         <div class="navbar-header pull-right">
+ -->          
+        <div class="collapse navbar-collapse" id="site-links">
+          <ul class="nav navbar-nav pull-right">
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#band">Band</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#shows">Shows</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#video">Video</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#booking">Booking</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div><!-- /.navbar-inner -->
+          </div>
+<!--         </div>
+ -->      </div><!-- /.container-fluid -->
     </div><!-- /.navbar -->
 
-
-    <div class="row carouselshim" style="height: 90px"> </div>
-
-    <div id="myCarousel" class="row carousel slide">
+    <div id="myCarousel" class="row carousel slide hidden-xs">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/carousel/98008_TubaLuba_Seattle_Library-11-compress.jpg" alt="">
+          <img class="img-responsive" src="img/carousel/98008_TubaLuba_Seattle_Library-11-compress.jpg" alt="">
           <div class="carousel-caption">
             <p>© 2014 Gabriel Indalecio Cano</p>
           </div>
         </div>
 
         <div class="item">
-          <img src="img/carousel/tea.jpg" alt="">
+          <img class="img-responsive" src="img/carousel/tea.jpg" alt="">
           <div class="carousel-caption">
             <p>courtesy Choice Organic Teas</p>
           </div>
         </div>
 
         <div class="item">
-          <img src="img/carousel/DSC_0563-compress.jpg" alt="">
+          <img class="img-responsive" src="img/carousel/DSC_0563-compress.jpg" alt="">
         </div>
       </div> <!-- -inner -->
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
-  <!--
-      <div class="row container">
-        <div class="span12">
-        </div>
-      </div>
-    -->
 
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
+    <div class="container-fluid">
       <div class="row">
-        <div class="span4">
-  <!--
 
-          <a data-toggle="lightbox" href="#poster">
-              <img style="width:100%; margin-bottom: 20px;" src="img/posters/tubaluba-tractor-20140627.jpg" />
-          </a>
-          <div id="poster" style="display:none" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
-              <div class='lightbox-dialog'>
-                  <div class='lightbox-content'>
-                      <img src="img/posters/tubaluba-tractor-20140627.jpg">
-                      <div class='lightbox-caption'>
-                          Album release party!! -TUBALUBA
-                      </div>
-                  </div>
-              </div>
+        <div class="col-sm-6">
+
+          <div class="box calendar"> <!-- calendar -->
+            <a class="anchor" name="shows"></a>
+            <div id="calendarContent">Loading calendar content...</div>
           </div>
-        -->
 
-        <p>
-          <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/777015&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-        </p>
-      </div><!-- /.span4 -->
+          <a class="anchor" name="quotes"></a>
+          <div class="box quotes">
+            <h2 class="box-heading">Quotes</h2>
+            <blockquote>We had so many people tell us it was the best wedding they’d ever been too!!! We feel that was because of Tubaluba. We knew 1.5 years ago that if we could make it work, it would be the centerpiece of our dream wedding. You guys (and gal) made it work and it was everything and more than we expected. 
+            </blockquote>
 
-      <div class="span4">
-        <p><a class="twitter-timeline" 
-          href="https://twitter.com/TubalubaBand" 
-          data-widget-id="387043083591757824"
-          data-border-color="#ffffff">Tweets by @TubalubaBand</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </p>
-      </div><!-- /.span4 -->
+            <blockquote>Just wanted to quickly follow up with you regarding your stellar performance at our wedding reception on the 11th of August. We had such a good time and you guys were a hit. EVERYONE was commenting about how much fun the reception was and how awesome you guys were. </blockquote>
 
-      <div class="span4">
-        <!-- SnapWidget -->
-        <iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDE1MHwyfDV8fG5vfDV8bm9uZXxvblN0YXJ0fG5v&v=191013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:310px; height: 700px" ></iframe>
-      </div><!-- /.span4 -->
-    </div><!-- /.row -->
+            <blockquote>You guys rocked the party, made our wedding one of the best weddings in history. (Or, so I'm told:) </blockquote>
 
-    <div class="row-fluid">
+            <blockquote>Tubaluba is Seattle's finest New Orleans-style Second Line band. </blockquote>
+            <a href="http://jazznowseattle.com/jazz-now-seattle-episode-33/" title="Jazz Now! Seattle" target="_blank"> - Jazz Now! Seattle</a>
 
-      <div class="span6">
+            <blockquote>Tubaluba is a local band in the New Orleans 2nd Line style, serving up New Orleans classics mixed with R&amp;B tunes and booty-shaking originals. If you like Rebirth Brass band, Dirty Dozen Brass Band, Mama Digdown's Brass Band, bourbon, hot sauce, or HONK! Fest West, these cats are your huckleberry.</blockquote>
 
-        <div class="box">
-          <a target="_blank" style="float:right;" href="https://www.facebook.com/TUBALUBA.BAND"><img src="img/facebook-icon.png" /></a>
-          <div class="">
+            <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="box"> <!-- video -->
+            <a class="anchor" name="video"></a>
+            <iframe width="100%" height="450" src="//www.youtube.com/embed/zJcg7zqqI6Y" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div class="box connect"> <!-- connect -->
 
             <div id="mc_embed_signup">
-              <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;margin:0px;width:255px;">
+              <form action="http://tubalubaband.us4.list-manage2.com/subscribe/post?u=db407207810081f57922404f1&amp;id=b96e53162d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="background-color: black;margin:0px;">
                 <label for="mce-EMAIL">Subscribe to our email list</label>
                 <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                 <div class="clear">
@@ -147,113 +133,90 @@
                 </div>
               </form>
             </div>
-
+            <a target="_blank" style="" href="https://www.facebook.com/TUBALUBA.BAND"><img src="img/facebook-icon.png" /></a>
           </div>
 
+          <div class="box"> <!-- booking -->
+            <a class="anchor" name="booking"></a>
+            <h2 class="box-heading">Booking</h2>
+            <p class="lead">To book Tubaluba, please contact In The Pocket Artists:</p>
+            <p>
+              <a href="http://www.InThePocketArtists.com">
+                <img src="img/inthepocket.jpg" id="inthepocketlogo">
+              </a>
+            </p>
+            <p>Phone: 541-550-7260</p>
+            <p>Email: <span class="mailme">info at inthepocketartists dot com</span></p>
+
+            <h3>Stage plots</h3>
+            <p><a target="_blank" href="img/Tubaluba-2014-Stage-Plot-copy.pdf">Tubaluba-Stage-Plot.pdf</a>
+            <p><a target="_blank" href="img/Tubaluba-2014-Marching-Stage-Plot-copy.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
+            <h3>Press</h3>
+            <p><a target="_blank" download="Tubaluba-press-photo.png" href="img/Tubaluba-press-photo.png">Press photo (color)</a>
+            <p><a target="_blank" download="Tubaluba-press-photo-bw.pdf" href="img/Tubaluba-press-photo-bw.pdf">Press photo (b/w)</a>
+            <p><a target="_blank" download="TubalubaPoster.jpg" href="img/TubalubaPoster.jpg">Tubaluba Poster 2014</a>
+          </div>
+
+
+          <div class="box"> <!-- the band -->
+            <a class="anchor" name="band"></a>
+            <h2 class="box-heading">The Band</h2>
+            <p>
+              Tubaluba is the brainchild of Josh “Papaluba” Wilson.  In 2009, Wilson gathered personnel with the philosophy that players had to be good, and players had to be cool.  Musically, Wilson hoped to capture the spirit of New Orleans, and convey it with a brass street band rhythm and style.  
+            </p>
+            <p>
+              The band still plays some of the brass band and vintage soul favorites that inspired it’s conception, but is steadily writing, developing, and performing it’s own repertoire.  Their self titled debut was released on Fat Tuesday 2012 to fanfare from Seattle’s KEXP radio, and the second album will be released as a vinyl 45 in July. 
+            </p>
+            <p>
+              Tubaluba has also conceived two signature events.  The first is an annual Halloween funeral procession through the streets of Seattle to a destination venue.  The second event is the Mardi Gras Party Bus.  For the past two Mardi Gras’, Tubaluba has filled a large coach bus with fans who then follow the band to several performances around town from noon to midnight.  This event gathers television, newspaper, radio, and blogging attention.
+            </p>
+            <p>
+              Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
+            </p>
+          </div>
+        </div> <!--col-md-6-->
+      </div> <!-- row-fluid -->
+<!--     </div> <!-- container-fluid
+
+    <div class="container marketing"> -->
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-sm-4">
+          <p>
+            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/777015&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+          </p>
         </div>
+        <div class="col-sm-4">
 
-    <!--
-        <div class="box">
-            <h2 class="box-heading">Music &amp; Videos</h2>
-            <iframe width="420" height="315" src="//www.youtube.com/embed/B5lJToWj4_0" frameborder="0" allowfullscreen></iframe>
-            <iframe width="420" height="315" src="http://www.youtube.com/embed/E8nqPfHO6lw" frameborder="0" allowfullscreen></iframe>
+          <p><a class="twitter-timeline" 
+            href="https://twitter.com/TubalubaBand" 
+            data-widget-id="387043083591757824"
+            data-border-color="#ffffff">Tweets by @TubalubaBand</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </p>
         </div>
-      -->
+        <div class="col-sm-4" id="instafeed">
 
-      <a class="anchor" name="photos"></a>
-  <!--
-        <div class="box">
-          <iframe src="http://snapwidget.com/in/?u=dHViYWx1YmFiYW5kfGlufDEwMHw0fDh8fG5vfDV8bm9uZXxvblN0YXJ0fG5v&v=191013" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:420px; height: 840px" ></iframe>
         </div>
-      -->
-      <a class="anchor" name="shows"></a>
-      <div class="box calendar">
-        <div id="calendarContent">Loading calendar content...</div>
-      </div> <!-- box -->
-      <a class="anchor" name="quotes"></a>
-      <div class="box quotes">
-        <h2 class="box-heading">Quotes</h2>
-        <blockquote>
-We had so many people tell us it was the best wedding they’d ever been too!!! We feel that was because of Tubaluba. We knew 1.5 years ago that if we could make it work, it would be the centerpiece of our dream wedding. You guys (and gal) made it work and it was everything and more than we expected. 
-        </blockquote>
-
-        <blockquote>Just wanted to quickly follow up with you regarding your stellar performance at our wedding reception on the 11th of August. We had such a good time and you guys were a hit. EVERYONE was commenting about how much fun the reception was and how awesome you guys were. </blockquote>
-
-        <blockquote>You guys rocked the party, made our wedding one of the best weddings in history. (Or, so I'm told:) </blockquote>
-
-        <blockquote>Tubaluba is Seattle's finest New Orleans-style Second Line band. </blockquote>
-        <a href="http://jazznowseattle.com/jazz-now-seattle-episode-33/" title="Jazz Now! Seattle" target="_blank"> - Jazz Now! Seattle</a>
-
-        <blockquote>Tubaluba is a local band in the New Orleans 2nd Line style, serving up New Orleans classics mixed with R&amp;B tunes and booty-shaking originals. If you like Rebirth Brass band, Dirty Dozen Brass Band, Mama Digdown's Brass Band, bourbon, hot sauce, or HONK! Fest West, these cats are your huckleberry.</blockquote>
-
-        <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
-
-
-
-
-
-
-
-  
-      </div>
-    </div> <!-- left col -->
-
-    <div class="box span6">
-      <a class="anchor" name="video"></a>
-      <iframe width="100%" height="370" src="//www.youtube.com/embed/zJcg7zqqI6Y" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="box span6">
-      <a class="anchor" name="booking"></a>
-      <h2 class="box-heading">Booking</h2>
-
-      <p class="lead">To book Tubaluba, please contact In The Pocket Artists:</p>
-      <p>
-        <a href="http://www.InThePocketArtists.com">
-          <img src="img/inthepocket.jpg">
-        </a>
-      </p>
-      <p>Phone: 541-550-7260</p>
-      <p>Email: <span class="mailme">info at inthepocketartists dot com</span></p>
-
-        <h3>Stage plots</h3>
-        <p><a target="_blank" href="img/Tubaluba-2014-Stage-Plot-copy.pdf">Tubaluba-Stage-Plot.pdf</a>
-        <p><a target="_blank" href="img/Tubaluba-2014-Marching-Stage-Plot-copy.pdf">Tubaluba-Marching-Stage-Plot.pdf</a>
-        <h3>Press</h3>
-        <p><a target="_blank" download="Tubaluba-press-photo.png" href="img/Tubaluba-press-photo.png">Press photo (color)</a>
-        <p><a target="_blank" download="Tubaluba-press-photo-bw.pdf" href="img/Tubaluba-press-photo-bw.pdf">Press photo (b/w)</a>
-        <p><a target="_blank" download="TubalubaPoster.jpg" href="img/TubalubaPoster.jpg">Tubaluba Poster 2014</a>
-
-      </div>
-
-
-      <div class="box span6">
-        <a class="anchor" name="band"></a>
-        <h2 class="box-heading">The Band</h2>
-        <p>
-          Tubaluba is the brainchild of Josh “Papaluba” Wilson.  In 2009, Wilson gathered personnel with the philosophy that players had to be good, and players had to be cool.  Musically, Wilson hoped to capture the spirit of New Orleans, and convey it with a brass street band rhythm and style.  
-        </p>
-        <p>
-          The band still plays some of the brass band and vintage soul favorites that inspired it’s conception, but is steadily writing, developing, and performing it’s own repertoire.  Their self titled debut was released on Fat Tuesday 2012 to fanfare from Seattle’s KEXP radio, and the second album will be released as a vinyl 45 in July. 
-        </p>
-        <p>
-          Tubaluba has also conceived two signature events.  The first is an annual Halloween funeral procession through the streets of Seattle to a destination venue.  The second event is the Mardi Gras Party Bus.  For the past two Mardi Gras’, Tubaluba has filled a large coach bus with fans who then follow the band to several performances around town from noon to midnight.  This event gathers television, newspaper, radio, and blogging attention.
-        </p>
-        <p>
-          Tubaluba currently does most of its entertaining on the West Coast, but the band aspires to take its brand of <b>jambalaya brass pop</b> nationwide, targeting festivals, celebrations, and any place people want to shake it.
-        </p>
-
-      </div> <!-- row span6 -->
-    </div>
-
+      </div><!-- /.row -->
     </div><!-- /.container -->
 
     <script>
       $(function(){
-        $('#myCarousel').carousel();
-        $('span.mailme').mailme();
         var calendarContainer = $('.calendar');
         Calendar.init(calendarContainer);
+        $('span.mailme').mailme();
+        $('#myCarousel').carousel();
+        var feed = new Instafeed({
+          get: 'user',
+          userId: 363408176,
+          accessToken: '363408176.467ede5.4c61508b403943589d7ffa4535137baf',
+          limit: 10
+        });
+        feed.run();
       });
+
     </script>
 
     <script>
