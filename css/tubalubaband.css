@@ -1,11 +1,15 @@
 #mc_embed_signup{
-  background:#fff; 
+  background-color:none; 
   clear:left; 
   font:12px Helvetica,Arial,sans-serif;  
   width:200px;
 }
 #mc_embed_signup label {
   font-size: 20px;
+  background-color:none;
+}
+#mc_embed_signup form {
+  background-color: none;
 }
 
 body {
@@ -161,14 +165,16 @@ blockquote:after {
     vertical-align:-.3em;
 }
 .connect > a {
-  margin-right:-14px;
-  z-index: 2;
+  float:right;
+  z-index: 5;
 }
 .connect #mc_embed_signup {
   z-index: 1;
+  clear:none;
 }
 .connect img {
-  width: 120px;
+  width: 100px;
+  z-index:5;
 }
 
 iframe[id^='twitter-widget-']{ 
