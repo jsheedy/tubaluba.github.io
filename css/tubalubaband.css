@@ -118,6 +118,8 @@ a.anchor{
   visibility: hidden;
 }
 
+/* TEMPLATES */
+
 .calendar .entry .date {
     font-size: 2em;
     margin-top: 10px;
@@ -133,6 +135,31 @@ a.anchor{
   width:30px;
 }
 
+.photos {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+.photos .photo {
+  position: relative;
+  margin: 25px;
+  box-shadow: 0px 0px 30px #880;
+}
+.photos .caption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-size: 12pt;
+}
+
+#instafeed a img {
+  margin: 15px;
+}
 .entry {
     border-top: 3px solid rgb(180,150,0);
     margin-top: 20px;
@@ -182,15 +209,20 @@ iframe[id^='twitter-widget-']{
 }
 
 
-@media ( max-width: 480px ) {
+@media ( max-width: 768px ) {
 
   .navbar .brand {
     font-size: 30px;
   }
+  .navbar .nav > li > a {
+    padding: 15px;
+    border-bottom: 2px solid black;
+  }
+
   h2.box-heading {
     font-size: 25px;
   }
-    #calendarContent .date {
+  #calendarContent .date {
     font-size: 20px;
   }
   iframe {

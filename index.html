@@ -8,34 +8,34 @@
     <meta name="author" content="Tubaluba">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
  
-    <link href="css/ekko-lightbox.min.css" rel="stylesheet">
-    <link href="css/tubalubaband.css" rel="stylesheet">
+    <link type="text/css" href="css/ekko-lightbox.min.css" rel="stylesheet">
+    <link type="text/css" href="css/tubalubaband.css" rel="stylesheet">
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+<!--     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/handlebars.runtime-v1.3.0.js"></script>
-    <script src="js/calendar-template.js"></script>
-    <script src="js/calendar.js"></script>
-    <script src="js/photos-template.js"></script>
-    <script src="js/photos.js"></script>
-    <script src="js/jquery.mailme.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/handlebars.runtime-v1.3.0.js"></script>
+    <script type="text/javascript" src="js/calendar-template.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/photos-template.js"></script>
+    <script type="text/javascript" src="js/photos.js"></script>
+    <script type="text/javascript" src="js/jquery.mailme.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!--     
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-lightbox.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-lightbox.min.js"></script>
  -->    
-    <script src="js/ekko-lightbox.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
-    <script src="js/instafeed.min.js"></script>
+    <script type="text/javascript" src="js/ekko-lightbox.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
 
   </head>
 
@@ -53,7 +53,7 @@
 
           <a class="brand" href="#">TUBALUBA</a>
         </div>   
-            
+
         <div class="collapse navbar-collapse" id="site-links">
           <ul class="nav navbar-nav pull-right">
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#band">Band</a></li>
@@ -163,7 +163,6 @@
                 </div>
               </form>
             </div>
-
           </div>
 
           <a class="anchor" name="quotes"></a>
@@ -184,12 +183,16 @@
             <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
           </div>
 
-          <a name="photos"></a>
-          <div class="box photos">
-
-          </div>
         </div> <!--col-md-6-->
-      </div> <!-- row-fluid -->
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-sm-12">
+          <a name="photos"></a>
+          <div class="box" id="photos_container">
+          </div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-sm-6">
@@ -198,7 +201,7 @@
             href="https://twitter.com/TubalubaBand" 
             data-widget-id="387043083591757824"
             data-border-color="#ffffff">Tweets by @TubalubaBand</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </p>
         </div>
         <div class="col-sm-6" id="instafeed">
@@ -206,12 +209,12 @@
       </div><!-- /.row -->
     </div><!-- /.container -->
 
-    <script>
+    <script type="text/javascript">
       $(function(){
         var calendarContainer = $('.calendar');
         Calendar.init(calendarContainer);
 
-        var photoContainer = $('.photos');
+        var photoContainer = $('#photos_container');
         Flickr.init(photoContainer);
 
         $('span.mailme').mailme();

@@ -1,10 +1,10 @@
 
-<h2 class="box-heading">Photos</h2>
-{{#photos}}
-  <div class="entry">
-    <p>{{description._content}}</p>
-      <a data-toggle="lightbox" data-type="image" href="http://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_b.jpg">
-        <img style="width: 100%" src="http://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_m.jpg">
-      </a>
-  </div>
-{{/photos}}
+<div class="photos">
+	{{#photos}}
+	  <div class="photo">
+			<a data-title="TUBALUBA" data-footer="{{description._content}}" data-toggle="lightbox" data-type="image" href="http://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_b.jpg">
+		  	<img style="" src="http://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_m.jpg">
+			</a>
+	  </div>
+	{{/photos}}
+</div>
