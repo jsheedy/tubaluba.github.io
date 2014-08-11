@@ -148,15 +148,21 @@ a.anchor{
 
 .photos {
   display: flex;
-  align-items: center;
   flex-flow: row wrap;
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+  display: -webkit-flex;
+  align-items: center;
 }
 .photos .photo {
-  position: relative;
+  flex: auto;
+  -webkit-flex: auto;
+  order: 1;
   margin: 25px;
   box-shadow: 0px 0px 30px #880;
+}
+.photos .photo img {
+  display: block;
+  margin: auto;
 }
 .photos .caption {
   position: absolute;
