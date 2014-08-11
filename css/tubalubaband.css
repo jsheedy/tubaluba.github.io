@@ -55,7 +55,7 @@ a {
   z-index: 9;
 }
 
-.carousel-control {
+#myCarousel .carousel-control {
   height: 80px;
   margin-top: 0;
   font-size: 120px;
@@ -64,8 +64,19 @@ a {
   border: 0;
   z-index: 10;
 }
+#quotesCarousel .carousel-control {
+  height: 40px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 10;
+}
 
-.carousel .item {
+#myCarousel .item {
   height: 500px;
 }
 
@@ -165,8 +176,11 @@ a.anchor{
     margin-top: 20px;
 }
 
+.quotes {
+  height: 450px;
+}
 .quotes h2 {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 blockquote {
@@ -231,4 +245,5 @@ iframe[id^='twitter-widget-']{
   #inthepocketlogo {
     width: 100%;
   }
+
 }
