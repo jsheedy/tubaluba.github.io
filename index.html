@@ -25,6 +25,8 @@
     <script src="js/handlebars.runtime-v1.3.0.js"></script>
     <script src="js/calendar-template.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/photos-template.js"></script>
+    <script src="js/photos.js"></script>
     <script src="js/jquery.mailme.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!--     <script src="js/bootstrap.js"></script>
@@ -60,10 +62,10 @@
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#shows">Shows</a></li>
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#music">Music</a></li>
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#booking">Booking</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#photos">Photos</a></li>
           </ul>
-          </div>
-<!--         </div>
- -->      </div><!-- /.container-fluid -->
+        </div>
+      </div><!-- /.container-fluid -->
     </div><!-- /.navbar -->
 
     <div id="myCarousel" class="row carousel slide hidden-xs">
@@ -183,6 +185,11 @@
 
             <a href="http://blog.seattlepi.com/bluenotesmusic/2011/03/08/tubaluba-gets-fat/" title="SeattlePI.com" target="_blank"> - SeattlePI.com</a>
           </div>
+
+          <a name="photos"></a>
+          <div class="box photos">
+
+          </div>
         </div> <!--col-md-6-->
       </div> <!-- row-fluid -->
 <!--     </div> <!-- container-fluid
@@ -209,6 +216,10 @@
       $(function(){
         var calendarContainer = $('.calendar');
         Calendar.init(calendarContainer);
+
+        var photoContainer = $('.photos');
+        Flickr.init(photoContainer);
+
         $('span.mailme').mailme();
         $('#myCarousel').carousel();
         var feed = new Instafeed({

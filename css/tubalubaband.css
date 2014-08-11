@@ -41,8 +41,8 @@ a {
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   color: rgb(190,150,75);
-  padding: 30px 15px;
-  font-size: 25px;
+  padding: 40px 11px;
+  font-size: 23px;
 }
 
 /* Carousel base class */
