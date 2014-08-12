@@ -161,11 +161,15 @@ a.anchor{
   margin: 25px;
   box-shadow: 0px 0px 30px #880;
   transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+
 }
 
 #instafeed img:hover,
 .photos .photo:hover {
   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+
 }
 .photos .photo img {
   display: block;
@@ -184,6 +188,8 @@ a.anchor{
 #instafeed a img {
   margin: 15px;
   transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+
 }
 .entry {
     border-top: 3px solid rgb(180,150,0);
