@@ -10,7 +10,7 @@ Calendar = {
         var twoDaysAgo = (new Date()).valueOf() / 1000 - 86400*2;
         $.each(data, function(i, item) {
           // month is 0 based but the other args to Date aren't
-          x=$.map(item.date.split('-'), function(e,i) {return parseInt(e);});
+          x=$.map(item.date.split('-'), function(e,i) {return parseInt(e, 10);});
           var date_obj = new Date(x[0],x[1]-1,x[2]);
           item.formatted_date = date_obj.toDateString();
           if (date_obj.valueOf()/1000 > twoDaysAgo) {
