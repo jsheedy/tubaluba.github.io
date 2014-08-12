@@ -9,7 +9,7 @@
   background-color:none;
 }
 #mc_embed_signup form {
-  background-color: none;
+  background-color: rgba(0,0,0,0);
 }
 
 body {
@@ -229,7 +229,6 @@ blockquote:after {
 }
 .connect img {
   width: 100px;
-  z-index:5;
 }
 
 iframe[id^='twitter-widget-']{ 
