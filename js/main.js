@@ -8,7 +8,6 @@ $(function(){
   $('span.mailme').mailme();
   $('#quotesCarousel').carousel();
 
-
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
@@ -17,7 +16,7 @@ $(function(){
   var carousel = $('#myCarousel');
   if (! carousel.is(':hidden')) {
     $.each(carousel.find('img'), function(index, img) {
-      img.src = img.dataset.src;
+      $(img).attr('src', img.getAttribute('data-src'));
     });
     carousel.carousel();
 

@@ -16,16 +16,24 @@ Flickr = {
       console.log('cache hit');
       self.render(cached.photoset.photo);
     } else {
-      console.log('cache miss'); 
+      console.log('cache miss');
+      $.support.cors = true;
+
       $.getJSON("https://api.flickr.com/services/rest?method=flickr.photosets.getPhotos"+
             "&api_key="+apiKey+
             "&photoset_id="+photosetId+
-            "&format=json&nojsoncallback=1"+
+            "&format=json&jsoncallback=?"+
            "&extras="+extras
         )
+        .error(function(data) {
+          console.log('error:', data);
+        })
         .done(function(data) {
           lscache.set(cacheKey, data, 60);
           self.render(data.photoset.photo);
+        })
+        .fail(function(data) {
+          console.log('flickr API fail: ', data);
         });
     }
   },
