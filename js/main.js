@@ -5,14 +5,6 @@ $(function(){
   var photoContainer = $('#photos_container');
   Flickr.init(photoContainer);
 
-  $('span.mailme').mailme();
-  $('#quotesCarousel').carousel();
-
-  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  }); 
-
   var carousel = $('#myCarousel');
   if (! carousel.is(':hidden')) {
     $.each(carousel.find('img'), function(index, img) {
@@ -28,5 +20,11 @@ $(function(){
     });
     feed.run();
   }
+  $('span.mailme').mailme();
+  $('#quotesCarousel').carousel();
+  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  }); 
 
 });
