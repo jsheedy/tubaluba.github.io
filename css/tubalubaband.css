@@ -58,11 +58,13 @@ a {
 #myCarousel .carousel-control {
   height: 80px;
   margin-top: 0;
-  font-size: 120px;
+  top: 250px;
+  font-size: 100px;
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
   background-color: transparent;
   border: 0;
   z-index: 10;
+  width: 100px;
 }
 #quotesCarousel .carousel-control {
   height: 40px;
@@ -77,7 +79,7 @@ a {
 }
 
 #myCarousel .item {
-  height: 500px;
+  height: 600px;
 }
 
 .carousel .item img {
