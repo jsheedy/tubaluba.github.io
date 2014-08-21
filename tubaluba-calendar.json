@@ -229,6 +229,15 @@
     "description": "Tubaluba will be performing a live webshow on Concert Window, which starts at 8:30pm (11:30pm EDT) on July 30. Wherever you are in the world, you can tune in! We'll be taking requests and answering your questions. You can purchase online tickets on a pay-what-you-want basis starting now at the link below. The webshow will not be recorded – it's offered in real time. We hope to see everyone tuning in!!"
   },
   {
+    "id": 29,
+    "date": "2014-08-23",
+    "time": "11am-4pm",
+    "venue": {
+      "name": "Snoqualmie Pass Shindig",
+      "address": "Snoqualmie Pass, WA",
+      "url": "http://www.imap.www.summit-at-snoqualmie.com/events/snoqualmie-pass-shindig"
+    }
+  },  {
     "id": 20,
     "date": "2014-08-24",
     "time": "2pm",
@@ -259,6 +268,16 @@
     "facebook": "https://www.facebook.com/events/1434555460159475/",
     "poster": "img/posters/Nectar-Tubaluba-5AlarmFunk-Cascadia10-20140905.png",
     "tickets": "http://www.ticketweb.com/fb/5135975/nectarlounge"
+  },
+  {
+    "id": 30,
+    "date": "2014-09-19",
+    "venue": {
+      "name": "Wild Buffalo House of Music",
+      "url": "http://wildbuffalo.net",
+      "address": "208 W. Holly Bellingham, WA"
+    },
+    "tickets": "http://holdmyticket.com/event/178273"
   },
   {
     "id": 28,
