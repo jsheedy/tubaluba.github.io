@@ -10,7 +10,9 @@ module.exports = function(grunt) {
       },
       js: {
         files: { 
-            'build/all.js': [
+            'build/main.min.js': [
+            "js/jquery-2.1.1.js",
+            "js/bootstrap.js",
             "js/lscache.min.js",
             "js/handlebars.runtime-v1.3.0.js",
             "js/calendar-template.js",
