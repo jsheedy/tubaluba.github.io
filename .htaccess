@@ -1,6 +1,7 @@
 RewriteEngine on
 
-RewriteRule ^/cgi-bin/update.cgi$ /cgi-bin/update.cgi [L]
+# RewriteRule ^/cgi-bin/update.cgi$ /cgi-bin/update.cgi [L]
+AddOutputFilterByType DEFLATE text/html text/plain application/javascript text/css
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . / [L,R=301]
