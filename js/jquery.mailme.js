@@ -17,13 +17,13 @@
 */
     
 jQuery.fn.mailme = function() {
-    var at = / at /;
-    var dot = / dot /g;
-    this.each( function() {
-        var addr = jQuery(this).text().replace(at,"@").replace(dot,".");
-        var title = jQuery(this).attr('title')
-        $(this)
-            .after('<a href="mailto:'+addr+'" title="'+title+'">'+ addr +'</a>')
-            .remove();
-    });
+  var at = / at /;
+  var dot = / dot /g;
+  this.each( function() {
+    var addr = jQuery(this).text().replace(at,"@").replace(dot,".");
+    var title = jQuery(this).attr('title');
+    $(this)
+    .after('<a href="mailto:'+addr+'" title="'+title+'">'+ addr +'</a>')
+    .remove();
+  });
 };

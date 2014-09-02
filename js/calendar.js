@@ -34,7 +34,7 @@ Calendar = {
       }
     });
 
-    var rendered = Handlebars.templates.calendar({entries: entries});
+    var rendered = Tubaluba.Templates.calendar({entries: entries});
     $('#calendarContent').html(rendered);    
   }
 };

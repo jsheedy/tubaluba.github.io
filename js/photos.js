@@ -39,7 +39,7 @@ Flickr = {
   },
 
   render: function(photos) {
-    var rendered = Handlebars.templates.photos({photos: photos});
+    var rendered = Tubaluba.Templates.photos({photos: photos});
     this.container.html(rendered);    
   }
 };
