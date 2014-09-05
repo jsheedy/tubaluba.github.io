@@ -9,7 +9,7 @@ Calendar = {
       console.log('cache hit');
       self.render(cached);
     } else {
-      var jqxhr = $.getJSON( "tubaluba-calendar.json")
+      var jqxhr = $.getJSON( "http://api.bandsintown.com/artists/tubaluba/events.json?callback=?&app_id=TUBALUBABAND.COM")
         .done(function(data) {
           lscache.set(cacheKey, data, 60);
           self.render(data);
@@ -22,16 +22,9 @@ Calendar = {
 
   render: function(data) {
 
-    var entries = [];
-    var twoDaysAgo = (new Date()).valueOf() / 1000 - 86400*2;
-    $.each(data, function(i, item) {
-      // month is 0 based but the other args to Date aren't
-      x=$.map(item.date.split('-'), function(e,i) {return parseInt(e, 10);});
-      var date_obj = new Date(x[0],x[1]-1,x[2]);
-      item.formatted_date = date_obj.toDateString();
-      if (date_obj.valueOf()/1000 > twoDaysAgo) {
-        entries.push(item);
-      }
+    var entries = $.map(data, function(item) {
+      item.formatted_date = moment(item.datetime).format('MMM D, YYYY h:mm a');
+      return item;
     });
 
     var rendered = Tubaluba.Templates.calendar({entries: entries});

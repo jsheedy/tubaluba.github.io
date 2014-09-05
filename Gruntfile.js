@@ -29,6 +29,7 @@ module.exports = function(grunt) {
             'js/thirdparty/handlebars.runtime-v1.3.0.js',
             'js/thirdparty/lscache.min.js',
             'js/thirdparty/instafeed.min.js',
+            'js/thirdparty/moment.min.js',
             'build/templates.js',
             'js/calendar.js',
             'js/photos.js',

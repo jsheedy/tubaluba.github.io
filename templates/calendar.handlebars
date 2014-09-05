@@ -7,8 +7,10 @@
       </a>
     {{/if}}
     <div class="date">
-      {{formatted_date}}
-      {{time}}
+      <a target="_blank" href="{{url}}">
+        {{formatted_date}}
+        {{time}}
+      </a>
     </div>
     <div class="venue">
       {{#if venue.url}}
@@ -17,11 +19,9 @@
         {{venue.name}}
       {{/if}}
     
-      {{#if venue.address}}
       <div class="address">
-        <a target="_blank" href="http://maps.google.com?q={{venue.address}}">{{venue.address}}</a>
+        <a target="_blank" href="http://maps.google.com?q={{venue.name}} {{venue.city}},{{venue.region}}">{{venue.city}}, {{venue.region}}</a>
       </div>
-      {{/if}}
     </div>
 
     <p>{{&description}}</p>
@@ -30,8 +30,8 @@
         <img style="width: 100%" src="{{poster}}">
       </a>
     {{/if}}
-    {{#if tickets}}
-      <a target="_blank" href="{{tickets}}">[buy tickets]</a>
+    {{#if ticket_url}}
+      <a target="_blank" href="{{ticket_url}}">[buy tickets]</a>
     {{/if}}
   </div>
 {{/entries}}
