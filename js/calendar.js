@@ -2,6 +2,7 @@ Calendar = {
 
   init: function (container) {
     var self = this;
+    self.container = container;
     var cacheKey = "calendar";
     var cached = lscache.get(cacheKey);
 
@@ -9,7 +10,7 @@ Calendar = {
       console.log('cache hit');
       self.render(cached);
     } else {
-      var jqxhr = $.getJSON( "http://api.bandsintown.com/artists/tubaluba/events.json?callback=?&app_id=TUBALUBABAND.COM")
+      $.getJSON( "http://api.bandsintown.com/artists/tubaluba/events.json?callback=?&app_id=TUBALUBABAND.COM")
         .done(function(data) {
           lscache.set(cacheKey, data, 60);
           self.render(data);
@@ -28,7 +29,7 @@ Calendar = {
     });
 
     var rendered = Tubaluba.Templates.calendar({entries: entries});
-    $('#calendarContent').html(rendered);    
+    this.container.html(rendered);    
   }
 };
 

@@ -1,5 +1,5 @@
 $(function(){
-  var calendarContainer = $('.calendar');
+  var calendarContainer = $('#calendarContent');
   Calendar.init(calendarContainer);
 
   var photoContainer = $('#photos_container');
