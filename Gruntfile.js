@@ -3,6 +3,20 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    cssmin: {
+      combine: {
+        files: {
+          'build/main.min.css': [
+            'css/thirdparty/bootstrap.min.css', 
+            'css/thirdparty/ekko-lightbox.min.css', 
+            'css/thirdparty/slim-081711.css', 
+            'css/thirdparty/css?family=Changa+One',
+            'css/tubalubaband.css' 
+          ]
+        }
+      }
+    },
+
     shell: {
       db: {
         command: 'bin/sqlite_to_json.py'
@@ -15,16 +29,17 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
+        mangle: true,
         report: 'gzip',
         compress: true,
-        sourceMap: true
+        sourceMap: true,
+        preserveComments: false
       },
       js: {
         files: { 
           'build/main.min.js': [
-            'js/thirdparty/jquery-2.1.1.js',
+            'js/thirdparty/jquery-2.1.1.min.js',
             'js/thirdparty/bootstrap.js',
-            'js/thirdparty/bootstrap-lightbox.min.js',
             'js/thirdparty/ekko-lightbox.min.js',
             'js/thirdparty/handlebars.runtime-v1.3.0.js',
             'js/thirdparty/lscache.min.js',
@@ -61,8 +76,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['shell', 'jshint', 'handlebars', 'uglify']);
+  grunt.registerTask('default', ['cssmin', 'jshint', 'handlebars', 'uglify']);
 
 };

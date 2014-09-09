@@ -120,9 +120,9 @@ a {
 }
 
 .container-fluid div.box {
-  background-color: rgba(0,0,0,.80);
+  background-color: rgba(0,0,0,.70);
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 a.anchor{
