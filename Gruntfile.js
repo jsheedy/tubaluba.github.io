@@ -3,6 +3,19 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    connect: {
+      server: {
+        options: {
+          port: 8000
+        }
+      }
+    },
+
+    watch: {
+      files: ['js/*.js', 'css/*.css', 'Gruntfile.js', 'templates/*.handlebars'],
+      tasks: ['build']
+    },
+
     cssmin: {
       combine: {
         files: {
@@ -77,8 +90,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+
 
   // Default task(s).
-  grunt.registerTask('default', ['cssmin', 'jshint', 'handlebars', 'uglify']);
+  grunt.registerTask('default', ['serve']);
+  
+  grunt.registerTask('serve', [
+    'connect:server',
+    'build',
+    'watch'
+    ]);
 
+  grunt.registerTask('build', ['cssmin', 'jshint', 'handlebars', 'uglify']);
 };
