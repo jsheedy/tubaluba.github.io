@@ -24,19 +24,18 @@ a {
     color: yellow;
 }
 
-/*.navbar {
-    height: 90px;
-    min-width:745px;
-}*/
-
 /* Downsize the brand/project name a bit */
+.navbar {
+  margin-bottom: 0px;
+  min-height: 40px;
+}
 .navbar .brand {
   color: rgb(190,150,75);
   padding: 10px 0px 0px 10px;
   font-size: 55px;
   font-weight: bold;
   text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    font-family: 'Changa One', cursive;
+  font-family: 'Changa One', cursive;
 }
 
 /* Navbar links: increase padding for taller navbar */
@@ -269,4 +268,14 @@ iframe[id^='twitter-widget-']{
     width: 100%;
   }
 
+}
+
+@media ( min-width: 768px ) {
+  .no-transition {
+    -webkit-transition: height 0.001s;
+    -moz-transition: height 0.001s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.001s;
+    transition: height 0.001s;
+  }  
 }
