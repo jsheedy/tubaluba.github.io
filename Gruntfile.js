@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['js/*.js', 'css/*.css', 'css/*.less', 'Gruntfile.js', 'templates/*.handlebars'],
+      files: ['src/*.html', 'js/*.js', 'css/*.css', 'css/*.less', 'Gruntfile.js', 'templates/*.handlebars'],
       tasks: ['build']
     },
 
@@ -23,6 +23,18 @@ module.exports = function(grunt) {
         },
         files: {
           "css/tubalubaband.css": "css/tubalubaband.less"
+        }
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'index.html': 'src/index.html'
         }
       }
     },
@@ -104,6 +116,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 
   // Default task(s).
@@ -115,5 +128,5 @@ module.exports = function(grunt) {
     'watch'
     ]);
 
-  grunt.registerTask('build', ['less', 'cssmin', 'jshint', 'handlebars', 'uglify']);
+  grunt.registerTask('build', ['less', 'htmlmin', 'cssmin', 'jshint', 'handlebars', 'uglify']);
 };
