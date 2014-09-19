@@ -123,6 +123,7 @@ a {
 }
 div.social {
   background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0px;
 }
 div.social div.youtube img {
   height: 90px;
