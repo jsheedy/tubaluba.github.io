@@ -122,23 +122,31 @@ a {
   margin-top: 20px;
 }
 div.social {
+  height: 70px;
   background-color: rgba(0, 0, 0, 0.7);
   margin-bottom: 0px;
 }
+div.social div {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+  margin: auto;
+}
 div.social div.youtube img {
-  height: 90px;
+  height: 63px;
 }
 div.social div.facebook img {
-  height: 55px;
-  margin-top: 17px;
-}
-div.social div.soundcloud img {
-  height: 60px;
-  margin-top: 15px;
+  height: 35px;
 }
 div.social div.twitter img {
-  height: 45px;
-  margin-top: 23px;
+  height: 31.5px;
+}
+div.social div.soundcloud img {
+  height: 38.5px;
 }
 a.anchor {
   display: block;

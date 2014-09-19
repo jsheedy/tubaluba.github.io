@@ -129,22 +129,33 @@ a {
   margin-top: 20px;
 }
 div.social {
+  @height: 70px;
+  height: @height;
   background-color: rgba(0,0,0,.70);
   margin-bottom: 0px;
+  div {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    margin: auto;
+  }
+  div a {
+  }
   div.youtube img {
-    height: 90px;
+    height: @height * .9;
   }
   div.facebook img {
-    height: 55px;
-    margin-top: 17px;
-  }
-  div.soundcloud img {
-    height: 60px;
-    margin-top: 15px;
+    height: @height * .5;
   }
   div.twitter img {
-    height: 45px;
-    margin-top: 23px;
+    height: @height * .45;
+  }
+  div.soundcloud img {
+    height: @height * .55;
   }
 }
 

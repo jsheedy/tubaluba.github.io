@@ -31,11 +31,11 @@ module.exports = function(grunt) {
       combine: {
         files: {
           'build/main.min.css': [
-            'css/thirdparty/bootstrap.min.css', 
-            'css/thirdparty/ekko-lightbox.min.css', 
-            'css/thirdparty/slim-081711.css', 
+            'css/thirdparty/bootstrap.min.css',
+            'css/thirdparty/ekko-lightbox.min.css',
+            'css/thirdparty/slim-081711.css',
             'css/thirdparty/css?family=Changa+One',
-            'css/tubalubaband.css' 
+            'css/tubalubaband.css'
           ]
         }
       }
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
         command: 'bin/sqlite_to_json.py'
       }
     },
-    
+
     jshint: {
       all: ['Gruntfile.js', 'js/*.js']
     },
@@ -54,13 +54,13 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: true,
-        report: 'gzip',
+        //report: 'gzip',
         compress: true,
         sourceMap: true,
         preserveComments: false
       },
       js: {
-        files: { 
+        files: {
           'build/main.min.js': [
             'js/thirdparty/jquery-2.1.1.min.js',
             'js/thirdparty/bootstrap.js',
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['serve']);
-  
+
   grunt.registerTask('serve', [
     'connect:server',
     'build',
