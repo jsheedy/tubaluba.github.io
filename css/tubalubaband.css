@@ -35,6 +35,9 @@ a {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
   font-family: 'Changa One', cursive;
 }
+.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   color: #be964b;
@@ -117,13 +120,13 @@ a {
   letter-spacing: -1px;
 }
 .container-fluid div.box {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.82);
   padding: 20px;
   margin-top: 20px;
 }
 div.social {
   height: 70px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.82);
   margin-bottom: 0px;
 }
 div.social div {

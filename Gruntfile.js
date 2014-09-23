@@ -1,12 +1,11 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
 
     connect: {
       server: {
         options: {
-          port: 8000,
+          port: 8080,
           debug: true
         }
       }
@@ -31,7 +30,8 @@ module.exports = function(grunt) {
       dist: {
         options: {
           removeComments: true,
-          collapseWhitespace: true
+          collapseWhitespace: true,
+          removeAttributeQuotes: true
         },
         files: {
           'index.html': 'src/index.html'
@@ -66,7 +66,6 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: true,
-        //report: 'gzip',
         compress: true,
         sourceMap: true,
         preserveComments: false
@@ -107,7 +106,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
@@ -118,15 +116,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-
-  // Default task(s).
-  grunt.registerTask('default', ['serve']);
-
   grunt.registerTask('serve', [
     'connect:server',
     'build',
     'watch'
     ]);
-
   grunt.registerTask('build', ['less', 'htmlmin', 'cssmin', 'jshint', 'handlebars', 'uglify']);
+  grunt.registerTask('default', ['serve']);
+
 };
