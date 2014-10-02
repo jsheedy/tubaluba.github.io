@@ -124,6 +124,9 @@ a {
   padding: 20px;
   margin-top: 20px;
 }
+div.box.poster img {
+  width: 100%;
+}
 div.social {
   height: 70px;
   background-color: rgba(0, 0, 0, 0.82);
@@ -146,10 +149,10 @@ div.social div.facebook img {
   height: 35px;
 }
 div.social div.twitter img {
-  height: 31.5px;
+  height: 28px;
 }
 div.social div.soundcloud img {
-  height: 38.5px;
+  height: 35px;
 }
 a.anchor {
   display: block;

@@ -27,7 +27,7 @@ function program1(depth0,data) {
     + "\n      </a>\n    </div>\n    <div class=\"venue\">\n      ";
   stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.venue)),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    \n      <div class=\"address\">\n        <a target=\"_blank\" href=\"http://maps.google.com?q="
+  buffer += "\n\n      <div class=\"address\">\n        <a target=\"_blank\" href=\"http://maps.google.com?q="
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.venue)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.venue)),stack1 == null || stack1 === false ? stack1 : stack1.city)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
