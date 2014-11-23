@@ -28,7 +28,7 @@ $(function(){
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
-  }); 
+  });
 
   App.youtubalubas = [
     '//www.youtube.com/embed/zJcg7zqqI6Y',
@@ -41,7 +41,6 @@ $(function(){
 
   var cache_key = "YOUTUBALUBA-INDEX";
   var index = lscache.get(cache_key);
-  console.log(index);
   if (typeof(index) === 'number') {
     index++;
     if (index >= App.youtubalubas.length) {
@@ -53,5 +52,4 @@ $(function(){
   lscache.set(cache_key, index);
   var url = App.youtubalubas[index];
   $('#youtubaluba').attr('src', url);
-
 });

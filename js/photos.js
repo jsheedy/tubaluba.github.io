@@ -1,5 +1,5 @@
 Flickr = {
-  
+
   cache: {},
 
   init: function(container) {
@@ -40,6 +40,6 @@ Flickr = {
 
   render: function(photos) {
     var rendered = Tubaluba.Templates.photos({photos: photos});
-    this.container.html(rendered);    
+    this.container.html(rendered);
   }
 };
