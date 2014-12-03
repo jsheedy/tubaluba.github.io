@@ -175,6 +175,10 @@ a.anchor {
 .calendar .fbevent img {
   width: 30px;
 }
+.contact #bloomingfootprintlogo {
+  width: 100%;
+  max-width: 288px;
+}
 .photos {
   display: flex;
   flex-flow: row wrap;
